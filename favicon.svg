@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" role="img" aria-labelledby="title">
+<title id="title">Símbolo do Museu Desvendando o Céu Austral</title>
+<rect width="150" height="150" rx="29" fill="#36A7C5"/>
+<g fill="#FFFFFF">
+  <circle cx="73.5" cy="29.5" r="9.6"/>
+  <circle cx="114.5" cy="60" r="9"/>
+  <circle cx="32" cy="68" r="9"/>
+  <circle cx="95" cy="93" r="4.8"/>
+  <circle cx="75" cy="126" r="9.7"/>
+</g>
+</svg>

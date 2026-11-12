@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="light dark" name="color-scheme"/>
+<meta content="#f5f7fb" id="themeColorMeta" name="theme-color"/>
+<script>
+    (function(){
+      var theme = "light";
+      try {
+        var stored = localStorage.getItem("desvendando-theme");
+        if (stored === "light" || stored === "dark") theme = stored;
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+      } catch (_) {}
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+<meta content="Conheça o Museu de Ciências Desvendando o Céu Austral, da UFRPE: história da extensão, oficinas, observações, foguetes educativos, ações no Semiárido e parceria com o OASI." name="description"/>
+<meta content="Desvendando o Céu Austral | Museu de Ciências da UFRPE" property="og:title"/>
+<meta content="Popularizar a ciência, valorizar a história e aproximar pessoas do Universo." property="og:description"/>
+<meta content="website" property="og:type"/>
+<title>Desvendando o Céu Austral | Museu de Ciências da UFRPE</title>
+<link href="favicon.png?v=20261112d" rel="icon" type="image/png"/>
+<link href="favicon.svg?v=20261112d" rel="alternate icon" type="image/svg+xml"/>
+<link href="favicon.ico?v=20261112d" rel="icon" type="image/x-icon"/>
+<style>
+    :root{--night:#08142a;--night2:#10203a;--ink:#142039;--muted:#56637a;--gold:#dfb24f;--gold-dark:#815700;--paper:#f5f7fb;--white:#fff;--line:#dbe1ea;--radius:1.25rem;--shadow:0 14px 38px rgba(9,24,50,.09);--header-height:74px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 16px)}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}body.no-scroll{overflow:hidden}img{display:block;max-width:100%}a{color:inherit}button,input{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid #e3b13e;outline-offset:3px}.container{width:min(1160px,calc(100% - 36px));margin-inline:auto}.section{padding:clamp(3.8rem,8vw,6.5rem) 0}.section-dark{background:var(--night);color:#f4f7ff}.section-dark .section-intro{color:#c5cedd}.section-alt{background:#eaf0f7}.section-heading{max-width:790px;margin:0 auto 2.7rem;text-align:center}.eyebrow{margin:0 0 .6rem;color:var(--gold-dark);font-size:.76rem;line-height:1.4;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.section-dark .eyebrow{color:#efc963}.section-heading h2{margin:.15rem 0 .85rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,5.5vw,3.2rem);line-height:1.12;letter-spacing:-.025em}.section-intro{margin:0 auto;max-width:690px;color:var(--muted);font-size:clamp(1rem,2.2vw,1.13rem)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.78rem 1.15rem;border:1px solid transparent;border-radius:999px;text-decoration:none;font-weight:750;line-height:1.25;transition:transform .2s ease,background .2s ease,border-color .2s ease}.btn:hover{transform:translateY(-1px)}.btn-gold{background:var(--gold);color:#182239}.btn-outline{border-color:rgba(255,255,255,.44);color:#fff;background:rgba(255,255,255,.05)}.btn-outline-dark{border-color:#c9d1df;color:var(--ink);background:#fff}.btn-row{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+    .site-header{position:sticky;z-index:50;top:0;background:rgba(8,20,42,.96);color:white;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);padding-top:env(safe-area-inset-top)}.header-inner{min-height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{display:flex;align-items:center;gap:.7rem;min-width:0;text-decoration:none;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:clamp(.9rem,2.7vw,1.14rem);line-height:1.16}.brand-text{max-width:225px}.brand-mark{display:block;width:42px;height:42px;flex:0 0 auto;object-fit:contain}.nav{display:flex;align-items:center;gap:.2rem}.nav a{display:inline-flex;align-items:center;min-height:42px;padding:.5rem .65rem;border-radius:999px;text-decoration:none;color:#e6ebf4;font-size:.85rem;font-weight:650;white-space:nowrap}.nav a:hover,.nav a:focus-visible{background:rgba(255,255,255,.1);color:#fff}.menu-toggle{display:none;min-width:44px;min-height:44px;border:1px solid rgba(255,255,255,.25);border-radius:12px;background:transparent;color:#fff;font-size:1.4rem;cursor:pointer}.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 10%,rgba(63,104,154,.36),transparent 45%),linear-gradient(125deg,#08142a 10%,#0d1b34 55%,#172b48);color:white;padding:clamp(3.2rem,7vw,6.3rem) 0}.hero:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:41px 41px;mask-image:linear-gradient(90deg,transparent 0,#000 60%,#000)}.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.4rem);align-items:center}.hero h1{max-width:700px;margin:.8rem 0 1.1rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.65rem,6.7vw,5rem);line-height:.99;letter-spacing:-.04em}.hero h1 span{color:var(--gold)}.hero-copy{max-width:660px;color:#d6dfec;font-size:clamp(1rem,2.3vw,1.2rem)}.hero-kicker{display:flex;align-items:center;gap:.7rem;color:#f0ca6d;text-transform:uppercase;letter-spacing:.16em;font-weight:800;font-size:.75rem}.hero-kicker img{width:18px;height:18px;object-fit:contain;flex:0 0 auto}.hero-image-wrap{position:relative;min-width:0}.hero-image{width:100%;aspect-ratio:4/4.2;max-height:560px;object-fit:cover;object-position:50% 52%;border-radius:1.5rem;border:1px solid rgba(255,255,255,.19);box-shadow:0 20px 60px rgba(0,0,0,.33)}.image-note{position:absolute;left:.8rem;right:.8rem;bottom:.8rem;padding:.72rem .9rem;border:1px solid rgba(255,255,255,.18);border-radius:1rem;background:rgba(8,20,42,.82);color:#eef3fb;font-size:.83rem;backdrop-filter:blur(8px)}.hero-facts{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:2.4rem}.fact{padding:1rem;border:1px solid rgba(255,255,255,.15);border-radius:1rem;background:rgba(255,255,255,.045)}.fact strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:1.35rem;line-height:1.15}.fact span{display:block;margin-top:.35rem;color:#ccd5e3;font-size:.82rem;line-height:1.4}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,5vw,4.2rem);align-items:center}.prose p{margin:.0 0 1rem;color:var(--muted)}.prose strong{color:var(--ink)}.prose .note{padding:1.1rem 1.2rem;border-left:3px solid var(--gold);border-radius:0 .8rem .8rem 0;background:#fff;color:var(--muted)}.image-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.image-mosaic img{width:100%;height:clamp(150px,22vw,270px);object-fit:cover;border-radius:1rem}.image-mosaic img:nth-child(2),.image-mosaic img:nth-child(4){transform:translateY(1.1rem)}.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:3rem}.value-card{padding:1.2rem;border:1px solid var(--line);border-radius:1.1rem;background:#fff}.value-icon{font-size:1.5rem;color:var(--gold-dark)}.value-card h3{margin:.5rem 0 .3rem;font-size:1.05rem}.value-card p{margin:0;color:var(--muted);font-size:.9rem}
+    .timeline{position:relative;max-width:920px;margin:0 auto}.timeline:before{content:"";position:absolute;left:15px;top:.8rem;bottom:.8rem;width:2px;background:linear-gradient(var(--gold),rgba(223,178,79,.1))}.timeline-item{position:relative;padding:0 0 1.2rem 44px}.timeline-dot{position:absolute;left:7px;top:1.3rem;width:18px;height:18px;border:3px solid var(--paper);border-radius:50%;background:var(--gold);box-shadow:0 0 0 2px var(--gold-dark)}.timeline-card{padding:1.15rem;border:1px solid var(--line);border-radius:1rem;background:#fff;box-shadow:0 8px 24px rgba(9,24,50,.035)}.date{margin:0 0 .4rem;color:var(--gold-dark);font-size:.75rem;letter-spacing:.14em;font-weight:850;text-transform:uppercase}.timeline-card h3{margin:0;font-family:Georgia,serif;font-size:1.35rem;line-height:1.2}.timeline-card p{margin:.8rem 0;color:var(--muted);font-size:.94rem}.source-link{display:inline-flex;gap:.35rem;align-items:center;color:var(--gold-dark);font-weight:750;text-decoration-thickness:1px;text-underline-offset:4px;font-size:.86rem}
+    .activity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.activity-card{min-width:0;overflow:hidden;border:1px solid #d9e0eb;border-radius:1.15rem;background:#fff;color:var(--ink);box-shadow:0 8px 24px rgba(0,0,0,.08)}.photo-button{width:100%;padding:0;border:0;background:#dbe3ed;cursor:zoom-in;text-align:left}.photo-button img{width:100%;height:230px;object-fit:cover;transition:transform .4s ease}.photo-button:hover img{transform:scale(1.025)}.card-body{padding:1.2rem}.card-body .eyebrow{font-size:.67rem}.card-body h3{margin:.45rem 0 .65rem;font-family:Georgia,serif;font-size:1.28rem;line-height:1.2}.card-body p:last-child{margin:0;color:#56637a;font-size:.92rem;line-height:1.6}
+    .oasi-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}.oasi-image{width:100%;height:100%;min-height:340px;max-height:520px;object-fit:cover;border-radius:1.25rem}.oasi-content h3{margin:.4rem 0 1rem;font-family:Georgia,serif;font-size:clamp(1.7rem,4vw,2.45rem);line-height:1.12}.oasi-content p{color:#c8d2e2}.oasi-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.65rem;margin:1.4rem 0}.oasi-stat{padding:1rem;border:1px solid rgba(255,255,255,.15);border-radius:.9rem;background:rgba(255,255,255,.04)}.oasi-stat strong{display:block;color:var(--gold);font-family:Georgia,serif;font-size:1.4rem}.oasi-stat span{display:block;margin-top:.25rem;color:#c8d2e2;font-size:.8rem;line-height:1.4}.partner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.partner-card{padding:1.3rem;border:1px solid var(--line);border-radius:1.1rem;background:#fff}.partner-symbol{display:inline-grid;place-items:center;width:44px;height:44px;border-radius:13px;background:#fff3d4;color:#94690d;font-size:1.3rem}.partner-card h3{margin:.85rem 0 .4rem;font-family:Georgia,serif;font-size:1.3rem}.partner-card p{margin:0;color:var(--muted);font-size:.92rem}.community-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.6rem;align-items:center;margin-top:2rem;padding:clamp(1rem,3vw,2rem);border:1px solid #d3dae6;border-radius:1.4rem;background:#fff}.community-box img{width:100%;height:100%;max-height:370px;min-height:220px;object-fit:cover;border-radius:1rem}.community-box h3{margin:.3rem 0 .7rem;font-family:Georgia,serif;font-size:clamp(1.5rem,3.5vw,2.25rem);line-height:1.18}.community-box p{color:var(--muted)}.caveat{padding:.9rem 1rem;border-left:3px solid var(--gold);background:#f6f7fa;color:var(--muted);font-size:.85rem}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}.gallery-item{position:relative;overflow:hidden;padding:0;min-width:0;min-height:170px;border:0;border-radius:1rem;background:#142039;color:white;cursor:zoom-in;text-align:left}.gallery-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}.gallery-item:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(4,11,24,.92))}.gallery-item span{position:absolute;z-index:1;right:.75rem;bottom:.75rem;left:.75rem;font-size:.82rem;font-weight:750;line-height:1.3}.gallery-item:hover img{transform:scale(1.05)}.source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}.source-card{display:flex;flex-direction:column;gap:.45rem;padding:1rem;border:1px solid var(--line);border-radius:.9rem;background:#fff;text-decoration:none;transition:border-color .2s,transform .2s}.source-card:hover{border-color:var(--gold-dark);transform:translateY(-2px)}.source-card strong{display:flex;justify-content:space-between;gap:.5rem;line-height:1.35}.source-card strong span{color:var(--gold-dark);flex:none}.source-card>span{color:var(--muted);font-size:.85rem;line-height:1.45}
+    .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.contact-card{padding:1.5rem;border:1px solid var(--line);border-radius:1.1rem;background:#fff}.contact-role{margin:0;color:var(--gold-dark);font-size:.74rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.contact-card h3{margin:.5rem 0 .25rem;font-family:Georgia,serif;font-size:1.65rem}.contact-card p{margin:.3rem 0;color:var(--muted)}.contact-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}.social-panel{margin-top:1rem;padding:clamp(1.3rem,4vw,2.4rem);border:1px solid #e4d1a5;border-radius:1.3rem;background:#fffaf0;text-align:center}.social-panel h3{margin:.6rem 0;font-family:Georgia,serif;font-size:clamp(1.55rem,4vw,2.1rem)}.social-panel p{margin:0 auto;max-width:650px;color:var(--muted)}.social-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:1.2rem}.email-break{overflow-wrap:anywhere}
+    .site-footer{padding:2.4rem 0 calc(2.2rem + env(safe-area-inset-bottom));background:var(--night);color:#d9e1ed;text-align:center}.site-footer .brand-mark{margin:0 auto}.site-footer p{margin:.6rem 0 0;font-size:.87rem}.site-footer small{display:block;margin-top:1rem;color:#a6b3c6}.back-top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));z-index:20;display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,255,255,.15);border-radius:50%;background:var(--night);color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);text-decoration:none;font-size:1.3rem}.lightbox{position:fixed;z-index:100;inset:0;display:none;align-items:center;justify-content:center;padding:1rem;padding-top:calc(4.8rem + env(safe-area-inset-top));padding-bottom:calc(1rem + env(safe-area-inset-bottom));background:rgba(3,9,20,.95)}.lightbox.is-open{display:flex}.lightbox img{max-width:100%;max-height:calc(100dvh - 7rem);object-fit:contain;border-radius:.7rem;box-shadow:0 12px 50px rgba(0,0,0,.45)}.lightbox-close{position:absolute;top:calc(.75rem + env(safe-area-inset-top));right:1rem;display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:#15233a;color:white;cursor:pointer;font-size:1.6rem}
+    @media(max-width:980px){.nav a{padding:.45rem .5rem;font-size:.79rem}.hero-grid{grid-template-columns:1.04fr .96fr;gap:2rem}.activity-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:760px){:root{--header-height:66px}.container{width:min(100% - 30px,620px)}.header-inner{gap:.55rem}.brand-mark{width:38px;height:38px}.brand-text{max-width:190px}.menu-toggle{display:inline-grid;place-items:center;flex:0 0 44px}.nav{position:absolute;top:calc(100% + 1px);left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:.25rem;max-height:calc(100dvh - var(--header-height) - 1rem);overflow-y:auto;overscroll-behavior:contain;padding:.65rem max(15px,calc((100vw - 620px)/2));border-bottom:1px solid rgba(255,255,255,.14);background:rgba(8,20,42,.99);box-shadow:0 16px 26px rgba(0,0,0,.18)}.nav.is-open{display:flex}.nav a{min-height:48px;padding:.8rem 1rem;border-radius:.7rem;font-size:.98rem}.hero{padding:3rem 0 2.5rem}.hero-grid{grid-template-columns:1fr;gap:1.7rem}.hero h1{font-size:clamp(2.55rem,11vw,4.2rem)}.hero-image{aspect-ratio:16/11;max-height:none;object-position:center 52%}.hero-facts{grid-template-columns:1fr 1fr;gap:.55rem;margin-top:1.5rem}.fact{padding:.8rem}.fact:last-child{grid-column:1/-1}.fact strong{font-size:1.2rem}.fact span{font-size:.78rem}.split,.oasi-grid,.community-box{grid-template-columns:minmax(0,1fr)}.oasi-grid>*{min-width:0}.oasi-image{width:100%;max-width:100%}.split{gap:1.9rem}.image-mosaic{max-width:500px;margin-inline:auto}.image-mosaic img{height:clamp(180px,48vw,260px)}.value-grid{grid-template-columns:repeat(2,1fr);gap:.65rem;margin-top:2.2rem}.value-card{padding:1rem}.timeline:before{left:12px}.timeline-item{padding-left:34px}.timeline-dot{left:4px;width:17px;height:17px}.timeline-card{padding:1rem}.timeline-card h3{font-size:1.28rem}.timeline-card p{font-size:.92rem}.activity-grid{grid-template-columns:1fr;gap:1rem}.activity-card{display:grid;grid-template-columns:minmax(105px,34%) 1fr;align-items:stretch}.activity-card .photo-button{height:100%;min-height:190px}.activity-card .photo-button img{height:100%;min-height:190px;max-height:240px;object-fit:cover}.card-body{padding:1rem}.card-body h3{font-size:1.17rem}.card-body p:last-child{font-size:.88rem}.oasi-image{min-height:220px;max-height:340px;aspect-ratio:16/10}.oasi-stat-grid{grid-template-columns:1fr 1fr}.oasi-stat:last-child{grid-column:1/-1}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}.gallery-item{min-height:150px}.gallery-item span{font-size:.78rem;left:.6rem;right:.6rem;bottom:.6rem}.partner-grid{grid-template-columns:1fr}.partner-card{padding:1.1rem}.community-box{gap:1rem}.community-box img{min-height:0;max-height:none;aspect-ratio:16/10}.source-grid{grid-template-columns:1fr}.source-card{padding:.95rem}.contact-grid{grid-template-columns:1fr}.contact-card{padding:1.2rem}.social-actions{flex-direction:column;align-items:stretch}.social-actions .btn{width:100%}.section-heading{text-align:left;margin-bottom:2rem}.section-heading .section-intro{margin-left:0}.section-heading h2{font-size:clamp(2rem,9vw,2.8rem)}.back-top{width:44px;height:44px;right:.7rem;bottom:calc(.7rem + env(safe-area-inset-bottom))}}
+    @media(max-width:390px){.container{width:calc(100% - 24px)}.brand-text{max-width:154px;font-size:.86rem}.hero .btn-row{flex-direction:column;align-items:stretch}.hero .btn{width:100%}.activity-card{grid-template-columns:105px minmax(0,1fr)}.activity-card .photo-button,.activity-card .photo-button img{min-height:205px}.card-body{padding:.75rem}.card-body h3{font-size:1.05rem}.card-body p:last-child{font-size:.83rem}.gallery-item{min-height:132px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+  
+    /* Tema, acessibilidade e ajustes de responsividade adicionados na revisão. */
+    .theme-toggle{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:42px;padding:.5rem .72rem;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.07);color:#f4f8ff;font-size:.82rem;font-weight:750;cursor:pointer;transition:background .2s ease,border-color .2s ease,transform .2s ease}
+    .theme-toggle:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.5);transform:translateY(-1px)}
+    .theme-toggle:focus-visible{outline:3px solid #73d4ef;outline-offset:3px}
+    .theme-icon{width:18px;height:18px;flex:0 0 18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .email-break{overflow-wrap:anywhere;word-break:normal}
+    html[data-theme="light"] .theme-toggle .sun-icon,html[data-theme="dark"] .theme-toggle .moon-icon{display:none}
+    html[data-theme="dark"]{color-scheme:dark;--ink:#e7eff8;--muted:#b5c4d6;--paper:#0a1525;--white:#142337;--line:#2b4158;--gold:#56bad7;--gold-dark:#8bd8ed;--shadow:0 14px 38px rgba(0,0,0,.28)}
+    html[data-theme="dark"] body{background:var(--paper);color:var(--ink)}
+    html[data-theme="dark"] .section-alt{background:#101e30}
+    html[data-theme="dark"] .section:not(.section-dark){color:var(--ink)}
+    html[data-theme="dark"] .section-heading h2,html[data-theme="dark"] .value-card h3,html[data-theme="dark"] .timeline-card h3,html[data-theme="dark"] .card-body h3,html[data-theme="dark"] .partner-card h3,html[data-theme="dark"] .community-box h3,html[data-theme="dark"] .contact-card h3,html[data-theme="dark"] .social-panel h3{color:#eaf4fc}
+    html[data-theme="dark"] .value-card,html[data-theme="dark"] .timeline-card,html[data-theme="dark"] .activity-card,html[data-theme="dark"] .partner-card,html[data-theme="dark"] .community-box,html[data-theme="dark"] .source-card,html[data-theme="dark"] .contact-card{background:#132338;border-color:var(--line);color:var(--ink);box-shadow:0 8px 24px rgba(0,0,0,.18)}
+    html[data-theme="dark"] .prose p,html[data-theme="dark"] .timeline-card p,html[data-theme="dark"] .value-card p,html[data-theme="dark"] .card-body p:last-child,html[data-theme="dark"] .partner-card p,html[data-theme="dark"] .community-box p,html[data-theme="dark"] .contact-card p,html[data-theme="dark"] .social-panel p,html[data-theme="dark"] .source-card>span{color:var(--muted)}
+    html[data-theme="dark"] .prose strong{color:#edf6ff}
+    html[data-theme="dark"] .prose .note,html[data-theme="dark"] .caveat{background:#192c42;color:#c1cfdf;border-color:#56bad7}
+    html[data-theme="dark"] .btn-outline-dark{background:#172a40;border-color:#405a73;color:#edf6ff}
+    html[data-theme="dark"] .source-card strong span,html[data-theme="dark"] .date,html[data-theme="dark"] .contact-role{color:#8bd8ed}
+    html[data-theme="dark"] .social-panel{background:#15273a;border-color:#3b526a}
+    html[data-theme="dark"] .section-dark{background:#0c1b2d;color:#edf5ff}
+    html[data-theme="dark"] .section-dark .section-intro{color:#bdccdc}
+    html[data-theme="dark"] .activity-card{border-color:#33495f}
+    html[data-theme="dark"] .photo-button{background:#192c40}
+    html[data-theme="dark"] .gallery-item{background:#14253a;color:#f3f8ff}
+    html[data-theme="dark"] .site-header{background:rgba(7,17,31,.97)}
+    html[data-theme="dark"] .nav{background:rgba(7,17,31,.99)}
+    html[data-theme="dark"] .nav a{color:#e7eff8}
+    html[data-theme="dark"] .nav a:hover,html[data-theme="dark"] .nav a:focus-visible{background:#1b354d;color:#fff}
+    html[data-theme="dark"] .menu-toggle{border-color:#47627a;background:#12243a;color:#f2f8ff}
+        @media(max-width:1080px){
+      .header-inner{gap:.65rem}
+      .brand{flex:1 1 auto}
+      .menu-toggle{display:inline-grid;place-items:center;flex:0 0 44px;order:2}
+      .theme-toggle{order:3;min-width:42px;padding:.5rem .65rem}
+      .theme-label{display:none}
+      .nav{position:absolute;top:calc(100% + 1px);left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:.25rem;max-height:calc(100dvh - var(--header-height) - 1rem);overflow-y:auto;overscroll-behavior:contain;padding:.65rem max(15px,calc((100vw - 620px)/2));border-bottom:1px solid rgba(255,255,255,.14);background:rgba(8,20,42,.99);box-shadow:0 16px 26px rgba(0,0,0,.18)}
+      .nav.is-open{display:flex;animation:menu-drop .18s ease-out}
+      .nav a{min-height:48px;padding:.8rem 1rem;border-radius:.7rem;font-size:.98rem;white-space:normal}
+    }
+    @keyframes menu-drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:390px){.theme-toggle{width:42px;min-width:42px;height:42px;padding:.5rem;gap:0}.theme-label{display:none}}
+    @media(min-width:1081px){.theme-toggle{margin-left:.35rem}}
+    @media(prefers-reduced-motion:reduce){.nav.is-open{animation:none}.theme-toggle{transition:none}}
+    html.motion-ready .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}
+    html.motion-ready .reveal.is-visible{opacity:1;transform:none}
+    @media(prefers-reduced-motion:reduce){html.motion-ready .reveal{opacity:1;transform:none;transition:none}}
+    html[data-theme="dark"] .section-dark .btn-outline{color:#f1f7ff}
+
+    .skip-link{position:fixed;z-index:200;top:.75rem;left:.75rem;transform:translateY(-180%);padding:.7rem 1rem;border:1px solid var(--line);border-radius:.65rem;background:var(--white);color:var(--ink);box-shadow:var(--shadow);font-weight:800;text-decoration:none;transition:transform .18s ease}
+    .skip-link:focus{transform:translateY(0)}
+    main#conteudo{scroll-margin-top:calc(var(--header-height) + 16px)}
+    .phone-number{display:inline-flex;align-items:center;min-height:46px;padding:.78rem .15rem;color:var(--muted);font-weight:650;line-height:1.25}
+    @media(max-width:430px){.activity-card{display:flex;flex-direction:column;min-width:0}.activity-card .photo-button{display:block;width:100%;height:auto;min-height:0}.activity-card .photo-button img{width:100%;height:auto;aspect-ratio:16/9;min-height:0;max-height:none;object-fit:cover}.activity-card .card-body{padding:1rem}.activity-card .card-body p:last-child{font-size:.9rem}}
+    @media(prefers-reduced-motion:reduce){.skip-link{transition:none}}
+
+    /* Atualizações: escolha do tipo de visita, formulário e catálogo de oficinas. */
+
+    /* A trajetória permanece recolhida até que o visitante acione o botão. */
+    .history-access{padding-top:2.2rem;padding-bottom:2.2rem}
+    .history-access-action{display:flex;justify-content:center}
+    .history-toggle{min-height:50px;padding:.9rem 1.5rem;font-size:1rem;box-shadow:0 8px 22px rgba(10,31,59,.12)}
+    .history-content{margin-top:2.2rem}
+    .history-content[hidden]{display:none!important}
+    html[data-theme="dark"] .history-access{background:#101e30}
+
+    .entry-section{background:var(--paper)}
+    .entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;max-width:960px;margin:0 auto}
+    .entry-card,.booking-panel,.team-card{padding:clamp(1.2rem,3vw,1.8rem);border:1px solid var(--line);border-radius:1.15rem;background:#fff;box-shadow:var(--shadow)}
+    .entry-card{display:flex;flex-direction:column;align-items:flex-start}
+    .entry-card h3,.team-card h3{margin:.45rem 0 .55rem;font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;line-height:1.18;color:var(--ink)}
+    .entry-card p:not(.eyebrow),.team-card p:not(.contact-role){color:var(--muted)}
+    .entry-card .btn{margin-top:auto}
+    .entry-icon{font-size:2rem}
+    .booking-panel{max-width:940px;margin:0 auto}
+    .booking-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+    .form-field{display:flex;flex-direction:column;gap:.45rem;min-width:0;margin:0;padding:0;border:0}
+    .form-field-wide{grid-column:1/-1}
+    .form-actions{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+    .form-actions button:disabled{opacity:.6;cursor:not-allowed}
+    .form-field label,.form-field legend{font-weight:750;color:var(--ink);font-size:.92rem}
+    .form-field input:not([type=checkbox]),.form-field select,.form-field textarea{width:100%;min-height:46px;padding:.72rem .8rem;border:1px solid #cbd4e1;border-radius:.7rem;background:#fff;color:#142039}
+    .form-field textarea{min-height:112px;resize:vertical}
+    .form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:3px solid rgba(55,151,196,.22);border-color:#327da8}
+    .check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem;margin-top:.2rem}
+    .check-grid label,.consent-label{display:flex;align-items:flex-start;gap:.55rem;font-weight:500!important}
+    .check-grid input,.consent-label input{width:18px;height:18px;flex:0 0 18px;margin-top:.15rem;accent-color:#17629c}
+    .form-note,.team-note{color:var(--muted);font-size:.86rem}
+    .form-feedback{display:none;margin:.8rem 0 0;padding:.85rem 1rem;border-radius:.7rem;background:#e7f5ec;color:#174c2d;font-weight:700}
+    .form-feedback.is-visible{display:block}.form-feedback.is-error{background:#fff0ee;color:#8f2418}.form-fallback-link{display:inline-flex;margin-top:.75rem;color:var(--gold-dark);font-weight:800;text-decoration:underline;text-underline-offset:3px}.form-fallback-link[hidden]{display:none!important}
+    .honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}
+    .schedule-note{max-width:900px;margin:-1.3rem auto 1.8rem;padding:1rem 1.2rem;border-left:4px solid var(--gold);border-radius:0 .8rem .8rem 0;background:rgba(255,255,255,.08);color:#eaf0f8}
+    .activity-materials{margin-top:.85rem;padding:.75rem .8rem;border-radius:.7rem;background:#f0f4f9;color:#34445b;font-size:.84rem;line-height:1.5}
+    .activity-materials strong{color:#142039}
+    .timeline-disclosure{max-width:920px;margin:1rem auto 0;border:1px solid var(--line);border-radius:1rem;background:#fff;box-shadow:0 8px 24px rgba(9,24,50,.04)}
+    .timeline-disclosure summary{padding:1rem 1.2rem;cursor:pointer;color:var(--ink);font-weight:800;list-style:none}
+    .timeline-disclosure summary::-webkit-details-marker{display:none}
+    .timeline-disclosure summary:after{content:"＋";float:right;color:var(--gold-dark);font-size:1.1rem}
+    .timeline-disclosure[open] summary:after{content:"−"}
+    .timeline-disclosure .timeline{padding:0 1rem 1rem}
+    .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;max-width:900px;margin:0 auto}
+    .team-card h3{font-size:1.5rem}
+    .team-note{max-width:900px;margin:1.2rem auto 0;padding:1rem 1.1rem;border-left:3px solid var(--gold);background:var(--paper)}
+    html[data-theme="dark"] .entry-card,html[data-theme="dark"] .booking-panel,html[data-theme="dark"] .team-card,html[data-theme="dark"] .timeline-disclosure{background:#142337;border-color:var(--line)}
+    html[data-theme="dark"] .form-field input:not([type=checkbox]),html[data-theme="dark"] .form-field select,html[data-theme="dark"] .form-field textarea{background:#0b192a;border-color:#40566f;color:#e7eff8}
+    html[data-theme="dark"] .form-field label,html[data-theme="dark"] .form-field legend,html[data-theme="dark"] .team-card h3,html[data-theme="dark"] .entry-card h3{color:#e7eff8}
+    html[data-theme="dark"] .activity-materials{background:#eaf0f7;color:#34445b}
+    @media(max-width:760px){.entry-grid,.team-grid,.booking-form{grid-template-columns:1fr}.form-field-wide{grid-column:auto}.check-grid{grid-template-columns:1fr}.schedule-note{margin:-.6rem 0 1.4rem}.entry-card .btn{width:100%}}
+  
+
+    /* Menu lateral deslizante para navegação entre as páginas do Museu. */
+    .header-controls{display:flex;align-items:center;gap:.55rem;flex:0 0 auto}
+    .side-menu-toggle{position:relative;z-index:1;display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0;border:1px solid rgba(255,255,255,.28);border-radius:14px;background:rgba(255,255,255,.07);color:#fff;box-shadow:0 5px 16px rgba(0,0,0,.12);cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .side-menu-toggle:hover,.side-menu-toggle[aria-expanded="true"]{transform:translateY(-1px);background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.52);box-shadow:0 7px 20px rgba(0,0,0,.2)}
+    .side-menu-toggle:focus-visible{outline:3px solid #efc963;outline-offset:4px}
+    .side-menu-toggle-icon{display:grid;place-items:center;width:24px;height:24px;color:#fff}
+    .side-menu-toggle-icon svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .side-menu-backdrop{position:fixed;z-index:83;inset:0;width:100%;height:100%;border:0;background:rgba(2,8,18,.58);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .25s ease,visibility .25s ease}
+    .side-menu-backdrop.is-open{opacity:1;visibility:visible;pointer-events:auto}
+    .side-pages-panel{position:fixed;z-index:84;inset:0 auto 0 0;width:min(88vw,340px);height:100vh;height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding:calc(1.2rem + env(safe-area-inset-top)) 1rem calc(1.2rem + env(safe-area-inset-bottom));background:#08142a;color:#fff;border-right:1px solid rgba(255,255,255,.14);box-shadow:18px 0 48px rgba(0,0,0,.3);transform:translateX(-105%);visibility:hidden;transition:transform .3s ease,visibility .3s ease}
+    .side-pages-panel.is-open{transform:translateX(0);visibility:visible}
+    .side-menu-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;padding-bottom:1.1rem;border-bottom:1px solid rgba(255,255,255,.13)}
+    .side-menu-header .eyebrow{margin:0 0 .35rem;color:#efc963;font-size:.65rem}
+    .side-menu-header h2{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;line-height:1.15;color:#fff}
+    .side-menu-close{display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border:1px solid rgba(255,255,255,.2);border-radius:50%;background:rgba(255,255,255,.07);color:#fff;font-size:1.55rem;line-height:1;cursor:pointer}
+    .side-pages-nav{display:grid;gap:.55rem;padding-top:1rem}
+    .page-nav-button{display:flex;flex-direction:column;gap:.25rem;min-height:62px;padding:.78rem .85rem;border:1px solid rgba(255,255,255,.12);border-radius:.8rem;background:rgba(255,255,255,.045);color:#fff;text-align:left;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+    .page-nav-button strong{font-size:.92rem;line-height:1.25}
+    .page-nav-button span{color:#b9c7d9;font-size:.76rem;line-height:1.35}
+    .page-nav-button:hover,.page-nav-button.is-active{border-color:rgba(223,178,79,.8);background:rgba(223,178,79,.12);transform:translateX(2px)}
+    body.side-menu-open{overflow:hidden}
+    .site-page[hidden]{display:none!important}
+    .site-page.is-active{animation:page-enter .38s ease both}
+    @keyframes page-enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:760px){.side-pages-panel{width:min(88vw,330px)}.header-controls{gap:.45rem}.side-menu-toggle{width:42px;height:42px;min-height:42px;flex-basis:42px;border-radius:13px}}
+    @media(prefers-reduced-motion:reduce){.side-menu-backdrop,.side-pages-panel,.side-menu-toggle,.page-nav-button,.site-page.is-active{transition:none;animation:none}}
+
+
+
+/* Organização institucional e ferramentas de visitação inspiradas em boas práticas de museus. */
+.visit-planning{display:grid;grid-template-columns:1.15fr .85fr;gap:1rem;margin:0 auto 1.5rem;max-width:1060px;padding:1.2rem;border:1px solid var(--line);border-radius:1.2rem;background:#fff;box-shadow:var(--shadow)}
+.visit-planning h3,.visit-faq h3{margin:.25rem 0 .7rem;font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;color:var(--ink)}
+.visit-steps{display:grid;gap:.65rem;margin:.4rem 0 0;padding-left:1.25rem;color:var(--muted);font-size:.92rem}
+.visit-steps li{padding-left:.2rem}.visit-steps strong{color:var(--ink)}
+.visit-programming{padding:1rem;border-radius:.9rem;background:#f2f5f9;color:#46546a}
+.visit-programming p:not(.eyebrow){font-size:.92rem;line-height:1.55}
+.visit-faq{max-width:1060px;margin:0 auto 2rem;padding:1.1rem 1.2rem;border:1px solid var(--line);border-radius:1.1rem;background:var(--white)}
+.visit-faq details{border-top:1px solid var(--line);padding:.75rem 0}.visit-faq summary{cursor:pointer;font-weight:750;color:var(--ink)}.visit-faq details p{margin:.55rem 0 0;color:var(--muted);font-size:.92rem;line-height:1.55}
+.activity-filters{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:0 0 1.15rem}.activity-filters>span{font-size:.86rem;font-weight:800;color:#e6edf7;margin-right:.25rem}
+.activity-filter{padding:.55rem .85rem;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.06);color:#f6f8fb;font-size:.82rem;font-weight:700;cursor:pointer}.activity-filter:hover,.activity-filter.is-active{border-color:var(--gold);background:rgba(223,178,79,.16);color:#fff}
+.activity-card[hidden]{display:none!important}
+html[data-theme="dark"] .visit-planning,html[data-theme="dark"] .visit-faq{background:#142337;border-color:var(--line)}
+html[data-theme="dark"] .visit-planning h3,html[data-theme="dark"] .visit-faq h3,html[data-theme="dark"] .visit-faq summary,html[data-theme="dark"] .visit-steps strong{color:#e7eff8}
+html[data-theme="dark"] .visit-programming{background:#0d1b2d;color:#c3d0df}
+@media(max-width:760px){.visit-planning{grid-template-columns:1fr;padding:.9rem}.visit-faq{padding:.9rem}.activity-filters{align-items:flex-start}.activity-filters>span{width:100%}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a aria-label="Desvendando o Céu Austral — O Museu" class="brand" href="#museu">
+      <img alt="" aria-hidden="true" class="brand-mark" height="42" src="favicon.png?v=20261112d" width="42"/>
+      <span class="brand-text">Desvendando o Céu Austral</span>
+    </a>
+    <div class="header-controls">
+      <button aria-controls="pagesMenu" aria-expanded="false" aria-label="Abrir menu de páginas" class="side-menu-toggle" id="pagesMenuToggle" title="Abrir menu de páginas" type="button">
+        <span class="side-menu-toggle-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span>
+      </button>
+      <button aria-label="Ativar tema escuro" aria-pressed="false" class="theme-toggle" id="themeToggle" title="Alternar entre tema claro e escuro" type="button">
+        <svg aria-hidden="true" class="theme-icon moon-icon" viewBox="0 0 24 24"><path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8 8.8 8.8 0 1 0 20.2 15.2Z"/></svg>
+        <svg aria-hidden="true" class="theme-icon sun-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <span class="theme-label">Tema escuro</span>
+      </button>
+    </div>
+  </div>
+</header>
+<button aria-hidden="true" aria-label="Fechar menu de páginas" class="side-menu-backdrop" id="pagesMenuBackdrop" tabindex="-1" type="button"></button>
+<aside aria-hidden="true" aria-label="Menu lateral de páginas" class="side-pages-panel" id="pagesMenu" inert>
+  <div class="side-menu-header">
+    <div><p class="eyebrow">Desvendando o Céu Austral</p><h2>Conheça mais o Museu</h2></div>
+    <button aria-label="Fechar menu" class="side-menu-close" id="pagesMenuClose" type="button">×</button>
+  </div>
+  <nav aria-label="Páginas do site" class="side-pages-nav"><button aria-current="page" class="page-nav-button is-active" data-page-anchor="museu" data-page-target="museu" type="button"><strong>O Museu</strong><span>Proposta, espaço e experiências</span></button><button class="page-nav-button" data-page-anchor="historia" data-page-target="historia" type="button"><strong>História do Museu</strong><span>Da extensão universitária ao Museu</span></button><button class="page-nav-button" data-page-anchor="atividades" data-page-target="atividades" type="button"><strong>Atividades</strong><span>Oficinas, observações e experiências</span></button><button class="page-nav-button" data-page-anchor="visita" data-page-target="visita" type="button"><strong>Visitação</strong><span>Planejamento, informações e formulário</span></button><button class="page-nav-button" data-page-anchor="equipe" data-page-target="equipe" type="button"><strong>Equipe</strong><span>Professores e monitores</span></button><button class="page-nav-button" data-page-anchor="contato" data-page-target="contato" type="button"><strong>Contato</strong><span>Telefone, Instagram e e-mail institucional</span></button><button class="page-nav-button" data-page-anchor="parcerias" data-page-target="parcerias" type="button"><strong>Parcerias</strong><span>Instituições e ações colaborativas</span></button><button class="page-nav-button" data-page-anchor="oasi" data-page-target="oasi" type="button"><strong>OASI</strong><span>Observatório e pesquisa astronômica</span></button><button class="page-nav-button" data-page-anchor="galeria" data-page-target="galeria" type="button"><strong>Galeria</strong><span>Registros de atividades e eventos</span></button><button class="page-nav-button" data-page-anchor="fontes" data-page-target="fontes" type="button"><strong>Fontes e registros</strong><span>Notícias e referências consultadas</span></button></nav>
+</aside>
+<main id="conteudo">
+<div aria-hidden="false" aria-label="O Museu" class="site-page is-active" data-page-panel="museu" id="page-museu"><section class="hero" id="apresentacao">
+<div class="container">
+<div class="hero-grid">
+<div>
+<p class="hero-kicker"><img alt="" aria-hidden="true" height="18" src="favicon.svg?v=20261112d" width="18"/> Museu de Ciências · UFRPE</p>
+<h1>O Museu de Ciências <span>Desvendando o Céu Austral</span></h1>
+<p class="hero-copy">O Desvendando o Céu Austral transforma a curiosidade pelo céu em experiências de aprendizagem. Da extensão universitária às ações itinerantes e ao Museu de Ciências, a missão permanece: popularizar a ciência e aproximar a astronomia das pessoas.</p>
+<div class="btn-row"><a class="btn btn-gold" href="#visita">Como participar ↓</a><a class="btn btn-outline" href="#atividades">Ver atividades</a></div>
+<div class="hero-facts"><div class="fact"><strong>Desde 2014</strong><span>trajetória de extensão e divulgação científica</span></div><div class="fact"><strong>18 de maio</strong><span>inauguração do Museu de Ciências na UFRPE · 2026</span></div><div class="fact"><strong>Ciência em movimento</strong><span>oficinas, observação, escolas, pesquisa e parcerias</span></div></div>
+</div>
+<figure class="hero-image-wrap"><img alt="Equipe reunida diante da cúpula de um observatório astronômico" class="hero-image" decoding="async" fetchpriority="high" src="assets/oasi-equipe.webp"/><figcaption class="image-note">Pessoas, instrumentos e território: a divulgação científica se constrói em conjunto.</figcaption></figure>
+</div>
+</div>
+</section><section class="section" id="museu">
+<div class="container">
+<header class="section-heading"><p class="eyebrow">O Museu</p><h2>Ciência, astronomia e descoberta para todos</h2><p class="section-intro">Um espaço de divulgação científica da UFRPE dedicado a aproximar o conhecimento, a curiosidade e a experiência do público.</p></header>
+<div class="split">
+<div class="prose"><p><strong>O Museu de Ciências Desvendando o Céu Austral</strong> é um espaço de divulgação científica vinculado à Universidade Federal Rural de Pernambuco (UFRPE). Sua proposta é aproximar a astronomia e outras áreas da ciência de estudantes, professores, famílias e visitantes, tornando o conhecimento acessível por meio da curiosidade, da observação, do diálogo e da experimentação.</p><p><strong>Mais do que apresentar informações,</strong> o Museu busca criar experiências de aprendizagem. O público é convidado a observar, fazer perguntas, conhecer instrumentos e modelos, participar de atividades mediadas e perceber como a ciência se relaciona com o cotidiano, com a cultura e com a história de Pernambuco.</p><p><strong>O espaço de visitação está localizado no térreo do Cegen, na UFRPE.</strong> Nele, a mediação do acervo pode ser articulada com oficinas, conversas, demonstrações e experiências educativas, conforme o perfil do grupo e a disponibilidade da equipe.</p><p><strong>O Museu também mantém a dimensão itinerante do Desvendando.</strong> As ações podem chegar a escolas, eventos e comunidades por meio de parcerias e planejamento conjunto. Assim, o espaço físico e as atividades externas se complementam na missão de popularizar a ciência.</p><p class="note">As visitas precisam ser solicitadas previamente. Datas, horários, formato de atendimento e atividades disponíveis são confirmados pela equipe, de acordo com a programação, os monitores e as condições de cada proposta.</p></div>
+<div class="image-mosaic"><img alt="Monitores do projeto em atividade externa" loading="lazy" src="assets/f10.webp"/><img alt="Atividade educativa com crianças" loading="lazy" src="assets/f8.webp"/><img alt="Monitor usando telescópio à noite" loading="lazy" src="assets/f9.webp"/><img alt="Demonstração de astronomia para estudantes" loading="lazy" src="assets/f14.webp"/></div>
+</div>
+<div class="value-grid"><article class="value-card"><span aria-hidden="true" class="value-icon">✧</span><h3>Curiosidade</h3><p>Despertar perguntas e o prazer de descobrir.</p></article><article class="value-card"><span aria-hidden="true" class="value-icon">◉</span><h3>Aprendizagem</h3><p>Conectar conceitos científicos a experiências reais.</p></article><article class="value-card"><span aria-hidden="true" class="value-icon">♡</span><h3>Participação</h3><p>Criar espaços de troca, inclusão e pertencimento.</p></article><article class="value-card"><span aria-hidden="true" class="value-icon">⌘</span><h3>Formação</h3><p>Aproximar estudantes e licenciandos da mediação científica.</p></article></div>
+</div>
+</section></div><div aria-hidden="true" aria-label="História do Museu" class="site-page" data-page-panel="historia" hidden="" id="page-historia"><section class="section section-alt history-access" id="historia">
+<div class="container history-access-container">
+<div class="history-access-action">
+<button aria-controls="historyContent" aria-expanded="false" class="btn btn-gold history-toggle" id="historyToggle" type="button">Conhecer a História do Desvendando</button>
+</div>
+<div class="history-content" hidden="" id="historyContent">
+<header class="section-heading"><p class="eyebrow">História do Museu</p><h2>Da iniciativa de extensão ao Museu de Ciências</h2><p class="section-intro">Conheça os registros públicos da trajetória do Desvendando, desde as ações de extensão até a criação do Museu de Ciências.</p></header>
+<div class="timeline">
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">MAI. 2014</p><h3>IV Mostra de Astronomia: extensão em ação</h3><p>Um dos primeiros registros públicos consultados documenta a IV Mostra de Astronomia na UFRPE, com participação do PIBID-Física e do Espaço Ciência. A programação reuniu estudantes e professores de diferentes escolas, a peça “O julgamento de Galileu”, palestras, exposições explicativas e oficinas com telescópios. A mostra também buscava incentivar a participação na Olimpíada Brasileira de Astronomia (OBA). A marca desse formato é fazer ciência por meio da experiência, da conversa e da participação cultural.</p><a class="source-link" href="https://desvendandoufrpe.blogspot.com/2014/05/o-que-aconteceu-iv-mostra-de-astronomia.html" rel="noopener noreferrer" target="_blank">Relato da IV Mostra · arquivo histórico ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">SET. 2014</p><h3>A astronomia sai do campus</h3><p>Registros do projeto descrevem ações em Serra Talhada e no IFPE de Belo Jardim. O formato incluía conversas sobre astronomia, experimentos, construção e lançamento de foguetes e observação do céu. A itinerância ampliou o alcance da extensão: em vez de esperar que o público chegasse à universidade, a equipe passou a levar experiências científicas a outras cidades e comunidades.</p><a class="source-link" href="https://desvendandoufrpe.blogspot.com/2014/09/desvendando-o-ceu-austral-participa-de.html" rel="noopener noreferrer" target="_blank">Registro de atividade em Serra Talhada ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">2015</p><h3>Astronomia em espaços públicos do Recife</h3><p>Programações abertas ao público na Torre Malakoff incluíram observação da Lua, de Júpiter e de constelações, além de conversas sobre meteoros, cometas e asteroides. A presença em espaços culturais aproximou a astronomia de pessoas que talvez não participassem de uma atividade universitária formal.</p><a class="source-link" href="https://www.cultura.pe.gov.br/canal/espacosculturais/programacao-no-observatorio-da-torre-malakoff-convida-interessados-em-astronomia/" rel="noopener noreferrer" target="_blank">Secretaria de Cultura de Pernambuco ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">2017</p><h3>Ciência também se conta e se encena</h3><p>Na III Semana de Popularização da Ciência no Semiárido, em Monteiro (PB), o arquivo do projeto registra palestra de Samyr Pessoa da Silva sobre astrobiologia e sua participação em teatro científico. O registro ajuda a documentar a dimensão colaborativa e artística das ações de divulgação, sem reduzir a trajetória do projeto a uma única pessoa.</p><a class="source-link" href="https://astronomiaufrpe.wixsite.com/desvendando/single-post/2017/05/29/iii-semana-da-populariza%C3%A7%C3%A3o-da-ci%C3%AAncia-no-semi%C3%A1rido-monteiro" rel="noopener noreferrer" target="_blank">Arquivo histórico do projeto ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">2021</p><h3>Visita técnica e aproximação com o OASI</h3><p>O Observatório Astronômico do Sertão de Itaparica passou a aparecer com mais destaque na trajetória documentada. Registros do Observatório Nacional indicam a participação de visitantes em ações de divulgação no OASI durante a Semana Nacional de Ciência e Tecnologia, aproximando educação básica, universidade e infraestrutura de pesquisa.</p><a class="source-link" href="https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/astronomia-e-astrofisica/oasi/impacton/noticias/oasi-recebe-visitantes-na-semana-nacional-de-ciencia-e-tecnologia-2021" rel="noopener noreferrer" target="_blank">Registro do Observatório Nacional · 2021 ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">2022</p><h3>O OASI recebe visitantes na Semana Nacional de C&amp;T</h3><p>Na programação de portas abertas, o observatório e parceiros promoveram atividades de divulgação, com observação e contato com a astronomia. A visita técnica registrada em maio também ajudou a conectar estudantes e professores com a instrumentação do observatório, o trabalho científico e as possibilidades de formação.</p><a class="source-link" href="https://www.gov.br/observatorio/pt-br/assuntos/noticias/observatorio-astronomico-do-sertao-de-itaparica-oasi-on-de-portas-abertas-na-snct-2022" rel="noopener noreferrer" target="_blank">OASI de portas abertas · 2022 ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">2023</p><h3>Dia Estadual da Astronomia na ALEPE</h3><p>O projeto integrou uma ação pública de observação do céu com telescópios, aproximando estudantes, servidores e visitantes da astronomia em parceria com a Comissão de Ciência e Tecnologia da Assembleia Legislativa de Pernambuco.</p><a class="source-link" href="https://www.alepe.pe.gov.br/2023/09/20/comissao-de-ciencia-e-tecnologia-realiza-acao-para-popularizar-a-astronomia/" rel="noopener noreferrer" target="_blank">Registro da ALEPE ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">MAR. 2026</p><h3>Pesquisa e audiovisual para ensinar Física</h3><p>Uma dissertação de mestrado da UFRPE estudou o uso de motion graphics no ensino de Física e incluiu um estudo de caso ligado ao Desvendando. Como produto aplicado, foi desenvolvido um vídeo para o projeto, com linguagem visual voltada à aprendizagem e conteúdo científico validado. Esse registro apresenta uma nova frente: materiais digitais que podem complementar oficinas, visitas e mediações presenciais.</p><a class="source-link" href="https://sigs.ufrpe.br/sigaa/public/programa/noticias_desc.jsf?id=400&amp;lc=pt_BR&amp;noticia=42351205" rel="noopener noreferrer" target="_blank">Registro acadêmico da UFRPE · 2026 ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">18 DE MAIO DE 2026</p><h3>Inauguração do Museu de Ciências</h3><p>O projeto ganhou um espaço de visitação no térreo do Cegen, na UFRPE. A inauguração foi anunciada com ações de observação solar, foguetes educativos e atividades de divulgação científica. O museu representa uma nova etapa de presença física e acolhimento de públicos — não o início da história, que já era marcada pela extensão e pela atuação itinerante.</p><a class="source-link" href="https://www.ufrpe.br/es/not%C3%ADcias/ufrpe-inaugura-museu-de-ci%C3%AAncias-desvendando-o-c%C3%A9u-austral/" rel="noopener noreferrer" target="_blank">Notícia institucional da UFRPE ↗</a></div></article>
+<article class="timeline-item"><span aria-hidden="true" class="timeline-dot"></span><div class="timeline-card"><p class="date">27–29 MAI. 2026</p><h3>10ª Semana POP e 15 anos do OASI</h3><p>Em Itacuruba, a Semana de Popularização da Ciência no Semiárido reuniu UFRPE, Observatório Nacional, INSA e parceiros locais. A equipe do Desvendando contribuiu com dinâmicas interativas em uma programação ligada à ciência, à cultura e ao futuro do Semiárido. É um exemplo da continuidade entre extensão universitária, território e pesquisa.</p><a class="source-link" href="https://ufrpe.br/not%C3%ADcias/semana-de-populariza%C3%A7%C3%A3o-da-ci%C3%AAncia-no-semi%C3%A1rido-chega-%C3%A0-d%C3%A9cima-edi%C3%A7%C3%A3o/" rel="noopener noreferrer" target="_blank">Notícia institucional da UFRPE ↗</a></div></article>
+</div>
+</div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Atividades" class="site-page" data-page-panel="atividades" hidden="" id="page-atividades"><section class="section section-dark" id="atividades">
+<div class="container"><header class="section-heading"><p class="eyebrow">Catálogo de atividades</p><h2>Atividades que colocam a ciência em movimento</h2><p class="section-intro">As ações são organizadas pela equipe do projeto e seus monitores. O formato é adaptado à idade dos participantes, ao espaço e às condições de cada atividade.</p></header>
+<p class="schedule-note"><strong>Sobre as palestras:</strong> elas não têm calendário fixo. Os temas e a realização dependem da disponibilidade dos monitores, de convidados e dos eventos em que a equipe participa.</p>
+
+<div aria-label="Filtrar atividades por categoria" class="activity-filters" role="group">
+<span>Filtrar atividades:</span>
+<button aria-pressed="true" class="activity-filter is-active" data-activity-filter="all" type="button">Todas</button>
+<button aria-pressed="false" class="activity-filter" data-activity-filter="observacao" type="button">Observação do céu</button>
+<button aria-pressed="false" class="activity-filter" data-activity-filter="oficinas" type="button">Oficinas</button>
+<button aria-pressed="false" class="activity-filter" data-activity-filter="mediacao" type="button">Mediação e cultura</button>
+<button aria-pressed="false" class="activity-filter" data-activity-filter="externas" type="button">Visitas e ações externas</button>
+</div>
+<div class="activity-grid"><article class="activity-card" data-activity-category="observacao"><button aria-label="Ampliar fotografia: Observação astronômica noturna" class="photo-button" data-alt="Observação astronômica noturna" data-lightbox="assets/f4.webp" type="button"><img alt="Observação astronômica noturna" decoding="async" loading="lazy" src="assets/f4.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Observação astronômica noturna</h3><p>Com telescópios e lunetas, o público pode observar a Lua, planetas e outros alvos disponíveis no céu. Os monitores orientam o olhar, explicam o funcionamento dos instrumentos e ajudam a transformar a observação em perguntas científicas. A seleção dos objetos depende da época, do clima e das condições do céu.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Telescópios ou lunetas, tripés, cartas celestes ou aplicativo de identificação do céu e lanternas de luz vermelha.</div><a aria-label="Agendar com o Museu: Observação astronômica noturna" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CObserva%C3%A7%C3%A3o%20astron%C3%B4mica%20noturna%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="observacao"><button aria-label="Ampliar fotografia: Observação do Sol" class="photo-button" data-alt="Observação do Sol" data-lightbox="assets/f15.webp" type="button"><img alt="Observação do Sol" decoding="async" loading="lazy" src="assets/f15.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Observação do Sol</h3><p>Sessões diurnas podem abordar características da nossa estrela com instrumentos e filtros apropriados. A mediação inclui segurança: nunca se deve olhar diretamente para o Sol sem equipamento adequado e corretamente instalado.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Instrumento solar apropriado ou telescópio com filtro solar frontal certificado e íntegro, tripé e material de mediação. Nunca se deve olhar diretamente para o Sol nem usar filtros improvisados.</div><a aria-label="Agendar com o Museu: Observação do Sol" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CObserva%C3%A7%C3%A3o%20do%20Sol%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="observacao"><button aria-label="Ampliar fotografia: Reconhecimento do céu" class="photo-button" data-alt="Reconhecimento do céu" data-lightbox="assets/f6.webp" type="button"><img alt="Reconhecimento do céu" decoding="async" loading="lazy" src="assets/f6.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Reconhecimento do céu</h3><p>Cartas celestes, referências do horizonte e observação a olho nu ajudam a localizar estrelas e constelações, reconhecer o Cruzeiro do Sul e compreender como o céu aparente muda ao longo do ano.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Cartas celestes ou planisfério, bússola, lanterna de luz vermelha e imagens de apoio.</div><a aria-label="Agendar com o Museu: Reconhecimento do céu" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CReconhecimento%20do%20c%C3%A9u%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="oficinas"><button aria-label="Ampliar fotografia: Montagem e lançamento de foguetes" class="photo-button" data-alt="Montagem e lançamento de foguetes" data-lightbox="assets/f3.webp" type="button"><img alt="Montagem e lançamento de foguetes" decoding="async" loading="lazy" src="assets/f3.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Montagem e lançamento de foguetes</h3><p>Oficinas convidam os participantes a construir e testar foguetes educativos. A atividade pode explorar força, pressão, ação e reação, estabilidade, experimentação e comparação de resultados, com adaptações à idade e à estrutura disponível.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Duas garrafas PET lisas de 2 L por foguete, papelão firme, fita adesiva larga ou silver tape, tesoura, estilete, régua, caneta, cola quente (opcional, com manuseio adulto), pequenos pesos para o contrapeso, base de lançamento própria e bomba de bicicleta. A água e os demais itens de operação são organizados pela equipe.</div><a aria-label="Agendar com o Museu: Montagem e lançamento de foguetes" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CMontagem%20e%20lan%C3%A7amento%20de%20foguetes%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="mediacao"><button aria-label="Ampliar fotografia: Teatro e personagens científicos" class="photo-button" data-alt="Teatro e personagens científicos" data-lightbox="assets/f1.webp" type="button"><img alt="Teatro e personagens científicos" decoding="async" loading="lazy" src="assets/f1.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Teatro e personagens científicos</h3><p>Figurinos, personagens e encenação aproximam o público de temas científicos com humor e imaginação. O teatro ajuda a acolher perguntas, quebrar a formalidade e abordar a história da ciência com públicos de diferentes idades.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Roteiro, figurinos ou adereços, objetos de cena e, quando necessário, caixa de som e microfone.</div><a aria-label="Agendar com o Museu: Teatro e personagens científicos" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CTeatro%20e%20personagens%20cient%C3%ADficos%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="mediacao"><button aria-label="Ampliar fotografia: Histórias, narrativas e mitos do céu" class="photo-button" data-alt="Histórias, narrativas e mitos do céu" data-lightbox="assets/f8.webp" type="button"><img alt="Histórias, narrativas e mitos do céu" decoding="async" loading="lazy" src="assets/f8.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Histórias, narrativas e mitos do céu</h3><p>Rodas de histórias conectam planetas, estrelas, exploração espacial e narrativas culturais. A conversa cria pontes entre imaginação, cultura e conhecimento científico, mantendo clara a diferença entre narrativas culturais e explicações construídas pela ciência.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Livros ou textos de apoio, imagens de estrelas e constelações, cartas celestes e, se disponível, projetor e caixa de som.</div><a aria-label="Agendar com o Museu: Histórias, narrativas e mitos do céu" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CHist%C3%B3rias%2C%20narrativas%20e%20mitos%20do%20c%C3%A9u%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="mediacao"><button aria-label="Ampliar fotografia: Palestras e rodas de conversa" class="photo-button" data-alt="Palestras e rodas de conversa" data-lightbox="assets/f12.webp" type="button"><img alt="Palestras e rodas de conversa" decoding="async" loading="lazy" src="assets/f12.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Palestras e rodas de conversa</h3><p>Encontros sobre Sistema Solar, astrobiologia, meteoros, cometas, história da astronomia em Pernambuco e temas atuais. O conteúdo é ajustado à faixa etária, ao nível da turma e ao contexto de cada comunidade.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Computador, projetor ou tela, caixa de som e microfone, conforme o tema e o espaço. A realização não é fixa: depende da disponibilidade dos monitores, de convidados e da programação de eventos.</div><a aria-label="Agendar com o Museu: Palestras e rodas de conversa" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CPalestras%20e%20rodas%20de%20conversa%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="oficinas"><button aria-label="Ampliar fotografia: Oficinas e experimentos" class="photo-button" data-alt="Oficinas e experimentos" data-lightbox="assets/f2.webp" type="button"><img alt="Oficinas e experimentos" decoding="async" loading="lazy" src="assets/f2.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Oficinas e experimentos</h3><p>Modelos, materiais didáticos e pequenas experiências permitem investigar fenômenos por meio da observação e da construção. A proposta é que o visitante participe, teste ideias e converse sobre o que percebeu, em vez de apenas assistir a uma explicação.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Materiais definidos pelo tema da oficina, como papel, papelão, cartolina, canetas, fita adesiva, tesoura, modelos didáticos e kits experimentais preparados pela equipe.</div><a aria-label="Agendar com o Museu: Oficinas e experimentos" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9COficinas%20e%20experimentos%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="mediacao"><button aria-label="Ampliar fotografia: Museu de Ciências e mediação do acervo" class="photo-button" data-alt="Museu de Ciências e mediação do acervo" data-lightbox="assets/f11.webp" type="button"><img alt="Museu de Ciências e mediação do acervo" decoding="async" loading="lazy" src="assets/f11.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Museu de Ciências e mediação do acervo</h3><p>No espaço do Museu, as visitas podem apresentar instrumentos, modelos e histórias que ajudam a contar como a ciência é construída. O acervo funciona como ponto de partida para atividades com escolas, famílias e visitantes, conforme a programação e a disponibilidade da equipe.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Peças e modelos do acervo, roteiro de mediação e materiais didáticos complementares definidos pela equipe para cada grupo.</div><a aria-label="Agendar com o Museu: Museu de Ciências e mediação do acervo" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CMuseu%20de%20Ci%C3%AAncias%20e%20media%C3%A7%C3%A3o%20do%20acervo%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="observacao"><button aria-label="Ampliar fotografia: Registros do céu e astrofotografia" class="photo-button" data-alt="Registros do céu e astrofotografia" data-lightbox="assets/f7.webp" type="button"><img alt="Registros do céu e astrofotografia" decoding="async" loading="lazy" src="assets/f7.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Registros do céu e astrofotografia</h3><p>Fotografias do céu e registros de atividades ajudam a documentar observações e compartilhar descobertas. As imagens também servem para conversar sobre poluição luminosa, condições atmosféricas, equipamentos e os limites do que se consegue observar.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Celular ou câmera, tripé, mapa ou aplicativo celeste e, quando disponível, adaptador para acoplar a câmera ao telescópio.</div><a aria-label="Agendar com o Museu: Registros do céu e astrofotografia" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CRegistros%20do%20c%C3%A9u%20e%20astrofotografia%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="externas"><button aria-label="Ampliar fotografia: Visitas técnicas e turismo astronômico" class="photo-button" data-alt="Visitas técnicas e turismo astronômico" data-lightbox="assets/f5.webp" type="button"><img alt="Visitas técnicas e turismo astronômico" decoding="async" loading="lazy" src="assets/f5.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Visitas técnicas e turismo astronômico</h3><p>Roteiros em espaços científicos aproximam o público do patrimônio cultural e científico de Pernambuco, incluindo observatórios e pontos históricos. Visitas dependem de agendamento, disponibilidade dos locais e condições de acesso.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Agendamento e autorização prévios, relação de participantes, transporte organizado pelo grupo, calçados fechados e água. Os requisitos específicos dependem do local visitado.</div><a aria-label="Agendar com o Museu: Visitas técnicas e turismo astronômico" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CVisitas%20t%C3%A9cnicas%20e%20turismo%20astron%C3%B4mico%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article>
+<article class="activity-card" data-activity-category="externas"><button aria-label="Ampliar fotografia: Ações itinerantes com escolas e comunidades" class="photo-button" data-alt="Ações itinerantes com escolas e comunidades" data-lightbox="assets/f13.webp" type="button"><img alt="Ações itinerantes com escolas e comunidades" decoding="async" loading="lazy" src="assets/f13.webp"/></button><div class="card-body"><p class="eyebrow">ATIVIDADE EDUCATIVA</p><h3>Ações itinerantes com escolas e comunidades</h3><p>O projeto leva atividades a escolas, praças e eventos públicos. O planejamento é adaptado à infraestrutura disponível e construído em diálogo com docentes, monitores e parceiros locais, para aproximar a ciência dos públicos que nem sempre conseguem visitar a universidade.</p><div class="activity-materials"><strong>Materiais necessários:</strong> Materiais definidos conforme a ação: modelos, kits experimentais, computador, projetor, extensão elétrica, mesas e cadeiras, quando necessários.</div><a aria-label="Agendar com o Museu: Ações itinerantes com escolas e comunidades" class="btn btn-gold activity-booking-btn" href="https://wa.me/5581986545345?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20do%20Desvendando%20o%20C%C3%A9u%20Austral%20e%20tenho%20interesse%20em%20agendar%20a%20atividade%20%E2%80%9CA%C3%A7%C3%B5es%20itinerantes%20com%20escolas%20e%20comunidades%E2%80%9D.%20Gostaria%20de%20consultar%20a%20disponibilidade%20e%20verificar%20uma%20destas%20possibilidades%3A%20levar%20minha%20escola%20ao%20Museu%2C%20solicitar%20uma%20visita%20do%20Desvendando%20%C3%A0%20minha%20escola%2Fcomunidade%20ou%20participar%20como%20visitante.%20Poderiam%20me%20orientar%20sobre%20as%20datas%20e%20condi%C3%A7%C3%B5es%3F%20Nome%3A%20___.%20Escola%2Finstitui%C3%A7%C3%A3o%3A%20___.%20Munic%C3%ADpio%3A%20___.%20Quantidade%20de%20participantes%3A%20___.%20" rel="noopener noreferrer" target="_blank">Agendar com o Museu</a></div></article></div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Visitação" class="site-page" data-page-panel="visita" hidden="" id="page-visita"><section class="section entry-section" id="visita">
+<div class="container">
+<header class="section-heading"><p class="eyebrow">Sua visita começa aqui</p><h2>Planeje sua visita ao Museu</h2><p class="section-intro">Escolha a modalidade de visita e envie uma solicitação. A equipe retornará para combinar as condições e a disponibilidade.</p></header>
+<div class="entry-grid">
+<article class="entry-card"><span aria-hidden="true" class="entry-icon">🏫</span><p class="eyebrow">Para escolas e instituições</p><h3>Quero organizar uma visita com minha turma</h3><p>Envie as informações da escola, o perfil dos estudantes e as atividades de interesse. A equipe avaliará a solicitação e entrará em contato para combinar os detalhes.</p><a class="btn btn-gold" href="#formulario-visita">Preencher solicitação de visita ↓</a></article>
+<article class="entry-card"><span aria-hidden="true" class="entry-icon">🔭</span><p class="eyebrow">Para visitantes</p><h3>Quero conhecer o Museu e as atividades</h3><p>Explore o catálogo, descubra as experiências educativas e acompanhe os canais do projeto para saber sobre a programação disponível.</p><a class="btn btn-outline-dark" href="#atividades">Conhecer as atividades ↓</a></article>
+</div>
+</div>
+</section>
+<div class="visit-planning">
+<div class="visit-planning-copy">
+<p class="eyebrow">Planeje sua visita</p>
+<h3>Como funciona o agendamento?</h3>
+<ol class="visit-steps">
+<li><strong>1. Envie a solicitação.</strong> Informe o tipo de visita, o perfil do grupo e as atividades de interesse.</li>
+<li><strong>2. Aguarde o retorno.</strong> A equipe verificará datas, disponibilidade de monitores e condições do espaço ou da ação externa.</li>
+<li><strong>3. Confirme os detalhes.</strong> A visita só estará confirmada depois do contato da equipe.</li>
+</ol>
+</div>
+<div class="visit-programming">
+<p class="eyebrow">Programação e novidades</p>
+<p>As atividades e palestras podem variar conforme os monitores, convidados, eventos e condições de observação. Consulte as atualizações nos canais oficiais.</p>
+<a class="btn btn-outline-dark" href="https://www.instagram.com/desvendandoceuaustral?obrf=am80NDhvcHRkZ2U1" rel="noopener noreferrer" target="_blank">Acompanhar o Instagram ↗</a>
+</div>
+</div>
+<div class="visit-faq">
+<h3>Perguntas frequentes</h3>
+<details><summary>Posso visitar sem agendamento?</summary><p>Para organizar o atendimento e confirmar a disponibilidade da equipe, recomendamos enviar a solicitação antes de se deslocar até o Museu.</p></details>
+<details><summary>O Museu recebe escolas e grupos?</summary><p>Sim. Escolas e instituições podem solicitar uma visita ao Museu ou consultar a possibilidade de uma ação do Desvendando em sua própria escola ou comunidade.</p></details>
+<details><summary>Todas as atividades acontecem em qualquer visita?</summary><p>Não. O formato é definido conforme a faixa etária, o tamanho do grupo, os materiais, a equipe disponível e as condições de cada atividade. Observações astronômicas também dependem do céu e dos equipamentos adequados.</p></details>
+<details><summary>Como informar necessidades de acessibilidade?</summary><p>Use o campo de informações adicionais no formulário para descrever necessidades de acessibilidade, comunicação ou apoio. A equipe poderá avaliar as condições e orientar o planejamento.</p></details>
+</div>
+<section class="section section-alt" id="formulario-visita">
+<div class="container">
+<header class="section-heading"><p class="eyebrow">Solicitação de visitação</p><h2>Envie seu pedido de visita</h2><p class="section-intro">Preencha os dados para solicitar uma visita ao Museu, uma ação itinerante do Desvendando ou informações para uma visita individual. A equipe responderá pelo e-mail informado.</p></header>
+<div class="booking-panel">
+<form id="visitForm" accept-charset="UTF-8" action="https://formsubmit.co/ajax/desvendandooceuaustral.df@ufrpe.br" class="booking-form" method="POST">
+<input name="_subject" type="hidden" value="Solicitação de visitação — Museu Desvendando o Céu Austral"/>
+<input name="_template" type="hidden" value="table"/>
+<input id="visitCopyEmail" name="_cc" type="hidden" value=""/>
+<input id="visitReplyEmail" name="_replyto" type="hidden" value=""/>
+<input id="visitPageUrl" name="_url" type="hidden" value=""/>
+<input aria-hidden="true" autocomplete="off" class="honeypot" name="_honey" tabindex="-1" type="text"/>
+<div class="form-field form-field-wide"><label for="visitType">Qual visita deseja solicitar? *</label><select id="visitType" name="Modalidade de visita" required=""><option value="">Selecione uma opção</option><option>Visita ao Museu de Ciências (escola ou grupo)</option><option>Solicitar ação itinerante do Desvendando na minha escola/comunidade</option><option>Visita individual, familiar ou público espontâneo</option><option>Outra solicitação / gostaria de tirar dúvidas</option></select></div>
+<div class="form-field"><label for="schoolName">Nome da escola/instituição ou do visitante *</label><input autocomplete="organization" id="schoolName" name="Escola, instituição ou visitante" placeholder="Nome da escola, instituição ou visitante" required="" type="text"/></div>
+<div class="form-field"><label for="schoolCity">Município / cidade *</label><input id="schoolCity" name="Município" placeholder="Cidade e estado" required="" type="text"/></div>
+
+
+
+<div class="form-field"><label for="schoolContact">Nome do(a) responsável pelo contato *</label><input autocomplete="name" id="schoolContact" name="Responsável pelo contato" required="" type="text"/></div>
+<div class="form-field"><label for="schoolEmail">E-mail para receber o retorno e a confirmação *</label><input autocomplete="email" id="schoolEmail" name="email" placeholder="seuemail@exemplo.com" required="" type="email"/></div>
+<div class="form-field"><label for="schoolPhone">Telefone / WhatsApp *</label><input autocomplete="tel" id="schoolPhone" name="Telefone para contato" placeholder="(00) 00000-0000" required="" type="tel"/></div>
+<div class="form-field"><label for="schoolQuantity">Quantidade aproximada de participantes *</label><input id="schoolQuantity" max="500" min="1" name="Quantidade de participantes" placeholder="Ex.: 35" type="number"/></div>
+<div class="form-field"><label for="schoolLevel">Etapa de ensino / faixa etária (se aplicável)</label><select id="schoolLevel" name="Etapa ou faixa etária"><option value="">Selecione</option><option>Educação Infantil</option><option>Ensino Fundamental — anos iniciais</option><option>Ensino Fundamental — anos finais</option><option>Ensino Médio</option><option>Educação de Jovens e Adultos</option><option>Grupo misto / outro</option></select></div>
+<div class="form-field"><label for="schoolDate">Data ou período de preferência</label><input id="schoolDate" name="Data ou período de preferência" placeholder="Ex.: primeira quinzena de dezembro" type="text"/></div>
+<fieldset class="form-field form-field-wide"><legend>Quais atividades despertam seu interesse?</legend><div class="check-grid">
+<label><input name="Atividades de interesse" type="checkbox" value="Observação astronômica"/> Observação astronômica</label>
+<label><input name="Atividades de interesse" type="checkbox" value="Oficina de foguetes"/> Oficina de foguetes</label>
+<label><input name="Atividades de interesse" type="checkbox" value="Oficinas e experimentos"/> Oficinas e experimentos</label>
+<label><input name="Atividades de interesse" type="checkbox" value="Palestras e rodas de conversa"/> Palestras e rodas de conversa</label>
+<label><input name="Atividades de interesse" type="checkbox" value="Mediação no Museu"/> Mediação no Museu</label>
+<label><input name="Atividades de interesse" type="checkbox" value="Outra / a combinar"/> Outra / a combinar</label>
+</div></fieldset>
+<div class="form-field form-field-wide"><label for="schoolMessage">Informações adicionais</label><textarea id="schoolMessage" name="Informações adicionais" placeholder="Informe necessidades de acessibilidade, faixa etária, estrutura disponível, dúvidas ou outras informações importantes para o planejamento." rows="4"></textarea></div>
+<div class="form-field form-field-wide"><label class="consent-label"><input name="Consentimento para contato" required="" type="checkbox" value="Autorizado"/>Autorizo o uso dessas informações para análise da solicitação e contato sobre a visita.</label></div>
+<div class="form-field form-field-wide"><div class="form-actions"><button class="btn btn-gold" type="submit">Enviar solicitação de visita</button><button class="btn btn-outline-dark" id="visitFormClear" type="reset">Limpar formulário</button></div><p class="form-note">O formulário encaminha a solicitação ao e-mail institucional e envia uma cópia integral ao endereço informado. O envio não confirma automaticamente a visita. Na primeira utilização, o endereço institucional precisa ser ativado no FormSubmit para que as mensagens sejam entregues.</p>
+<p aria-live="polite" class="form-feedback" id="formFeedback" role="status" tabindex="-1"></p>
+<a class="form-fallback-link" href="mailto:desvendandooceuaustral.df@ufrpe.br?subject=Solicita%C3%A7%C3%A3o%20de%20visita%20ao%20Museu" id="formFallback" hidden>Enviar a solicitação diretamente pelo e-mail institucional</a></div>
+</form>
+</div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Equipe" class="site-page" data-page-panel="equipe" hidden="" id="page-equipe"><section class="section" id="equipe">
+<div class="container">
+<header class="section-heading"><p class="eyebrow">Equipe do Museu</p><h2>Monitores e professores envolvidos na organização</h2><p class="section-intro">A organização do Desvendando reúne docentes e estudantes que colaboram com o planejamento, a mediação e as atividades de divulgação científica.</p></header>
+<div class="team-grid">
+<article class="team-card"><p class="contact-role">Professor responsável / idealizador</p><h3>Prof. Dr. Antônio Carlos da Silva Miranda</h3><p>Responsável pela orientação acadêmica e pela articulação institucional do projeto.</p></article>
+<article class="team-card"><p class="contact-role">Monitora responsável pela organização</p><h3>Stephanie de Lima Gomes Rodrigues</h3><p>Atuação na organização das visitas, no encaminhamento das solicitações e no apoio à mediação das atividades.</p></article>
+</div>
+<p class="team-note">A composição de monitores pode variar conforme o período letivo e a programação de eventos. As informações da equipe podem ser atualizadas pela organização do projeto.</p>
+</div>
+</section></div><div aria-hidden="true" aria-label="Contato" class="site-page" data-page-panel="contato" hidden="" id="page-contato"><section class="section section-alt" id="contato">
+<div class="container"><header class="section-heading"><p class="eyebrow">Contato</p><h2>Vamos levar a ciência a mais pessoas?</h2><p class="section-intro">Fale com a organização do Museu, acompanhe a programação e envie suas dúvidas pelos canais institucionais.</p></header>
+<div class="contact-grid"><article class="contact-card"><p class="contact-role">Monitora responsável pela organização</p><h3>Stephanie de Lima Gomes Rodrigues</h3><p>Contato para organização, informações e encaminhamento de atividades.</p><div class="contact-actions"><span class="phone-number">☎ 81 98654-5345</span><a class="btn btn-gold" href="https://wa.me/5581986545345" rel="noopener noreferrer" target="_blank">Conversar no WhatsApp ↗</a></div></article></div>
+<div class="social-panel"><img alt="" aria-hidden="true" class="brand-mark" height="42" src="favicon.svg?v=20261112d" style="margin:auto" width="42"/><h3>Acompanhe e escreva para o Desvendando</h3><p>Veja registros das atividades, acompanhe novidades e envie sua mensagem pelos canais oficiais do projeto.</p><div class="social-actions"><a class="btn btn-gold" href="https://www.instagram.com/desvendandoceuaustral?obrf=am80NDhvcHRkZ2U1" rel="noopener noreferrer" target="_blank">◎ @desvendandoceuaustral</a><a class="btn btn-outline-dark email-break" href="mailto:desvendandooceuaustral.df@ufrpe.br">✉ desvendandooceuaustral.df@ufrpe.br</a><a class="btn btn-outline-dark" href="https://drive.google.com/drive/folders/1LGv4pSrye9NgpvY-9K5fTtsJt1vxiGj4?usp=sharing" rel="noopener noreferrer" target="_blank">▧ Acervo de fotos no Drive ↗</a></div></div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Parcerias" class="site-page" data-page-panel="parcerias" hidden="" id="page-parcerias"><section class="section" id="parcerias">
+<div class="container"><header class="section-heading"><p class="eyebrow">05 · Cooperação e território</p><h2>Ciência é uma construção coletiva</h2><p class="section-intro">Universidades, observatórios, escolas, instituições públicas e comunidades ajudam a fazer a ciência circular para além dos espaços acadêmicos.</p></header>
+<div class="partner-grid"><article class="partner-card"><span aria-hidden="true" class="partner-symbol">⌂</span><h3>UFRPE</h3><p>Universidade sede do projeto e do Museu. Reúne docentes, estudantes e licenciandos em ações de extensão, ensino e divulgação científica.</p></article><article class="partner-card"><span aria-hidden="true" class="partner-symbol">✦</span><h3>OASI · Observatório Nacional</h3><p>O observatório em Itacuruba oferece um elo entre infraestrutura de pesquisa, visitas técnicas e ações educativas. As pesquisas remotas dependem de projetos, protocolos e autorizações institucionais específicos.</p></article><article class="partner-card"><span aria-hidden="true" class="partner-symbol">⌘</span><h3>INSA e Semana POP</h3><p>A Semana de Popularização da Ciência no Semiárido articula pesquisa, educação, cultura e saberes locais em atividades com escolas e comunidades.</p></article><article class="partner-card"><span aria-hidden="true" class="partner-symbol">▤</span><h3>Espaço Ciência e SECTI-PE</h3><p>Registros históricos e ações públicas demonstram a importância da cooperação com instituições de divulgação científica, exposições, oficinas e iniciativas de ciência para todos.</p></article><article class="partner-card"><span aria-hidden="true" class="partner-symbol">◎</span><h3>Escolas e redes de ensino</h3><p>Professores, gestores e estudantes participam de visitas, oficinas, rodas de conversa e experiências adequadas a cada comunidade escolar.</p></article><article class="partner-card"><span aria-hidden="true" class="partner-symbol">⌖</span><h3>Prefeituras e comunidades</h3><p>Quando articuladas para uma ação, as parcerias locais podem mobilizar escolas e público, oferecer espaço e apoio logístico e valorizar a história científica de cada município.</p></article></div>
+<div class="community-box"><img alt="Atividade de astronomia com instrumentos em área externa" loading="lazy" src="assets/f5.webp"/><div><p class="eyebrow">Memória, meteoritos e cultura local</p><h3>O céu também conta a história de cada lugar</h3><p>Em <strong>Santa Filomena</strong>, a queda de meteoritos em agosto de 2020 motivou articulações entre universidade, órgãos de ciência e gestores, com propostas de preservação da memória, educação astronômica e ações para escolas e moradores.</p><p>Na região da <strong>Serra do Magé, em Alagoinha</strong>, a queda observada em 1923 é uma referência histórica local. Registros de iniciativas municipais relacionam esse patrimônio a atividades de observação, foguetes educativos e planetário móvel. A divulgação científica pode conectar pesquisa, educação, turismo, cultura e identidade local.</p><div class="btn-row"><a class="btn btn-outline-dark" href="https://sectipe.blogspot.com/2020/10/clipmail-secti-08102020.html" rel="noopener noreferrer" target="_blank">Santa Filomena ↗</a><a class="btn btn-outline-dark" href="https://www.museuitinerante.com/serra-do-mag%C3%A9" rel="noopener noreferrer" target="_blank">Meteorito Serra do Magé ↗</a><a class="btn btn-outline-dark" href="https://www.globgov.com/BR/Alagoinha/542516145768365/Prefeitura-Municipal-de-Alagoinha-PE" rel="noopener noreferrer" target="_blank">Registros de Alagoinha ↗</a></div></div></div>
+<p class="caveat" style="margin-top:1rem">Transparência: esta página reúne registros públicos de atividades e cooperações. Não presume que toda iniciativa represente um convênio jurídico permanente. Da mesma forma, a menção a pesquisa remota não significa acesso automático a dados ou telescópios; cada atividade depende dos procedimentos e acordos institucionais aplicáveis.</p>
+</div>
+</section></div><div aria-hidden="true" aria-label="OASI" class="site-page" data-page-panel="oasi" hidden="" id="page-oasi"><section class="section section-dark" id="oasi" style="background:#0d1d35;border-top:1px solid rgba(255,255,255,.08)">
+<div class="container"><header class="section-heading"><p class="eyebrow">04 · Pesquisa, educação e território</p><h2>O OASI: observar o céu a partir do Sertão</h2><p class="section-intro">O Observatório Astronômico do Sertão de Itaparica aproxima o Nordeste de pesquisas sobre pequenos corpos do Sistema Solar e abre oportunidades para ações de divulgação e formação científica.</p></header>
+<div class="oasi-grid"><img alt="Grupo de participantes em frente à cúpula do observatório" class="oasi-image" loading="lazy" src="assets/oasi-equipe.webp"/><div class="oasi-content"><p class="eyebrow">OASI · Itacuruba, Pernambuco</p><h3>Do trabalho de pesquisa à experiência pública da astronomia</h3><p>O Observatório Astronômico do Sertão de Itaparica (OASI), ligado ao Observatório Nacional, é uma infraestrutura de pesquisa situada no Sertão pernambucano. Seu telescópio robótico participa de pesquisas astronômicas, incluindo observações de pequenos corpos do Sistema Solar. A pesquisa e a divulgação científica são dimensões relacionadas, mas diferentes: a primeira segue protocolos e projetos científicos; a segunda cria oportunidades para que o público conheça instrumentos, métodos e perguntas da astronomia.</p><p>Para o Desvendando, visitas técnicas e ações conjuntas constituem uma forma de aproximar estudantes, professores, monitores e pesquisadores. O contato com um observatório ajuda a mostrar que ciência não é apenas conteúdo de livro: envolve equipamentos, coleta de dados, trabalho em equipe, análise e colaboração entre instituições.</p><p>A relação com o OASI também aparece na Semana de Popularização da Ciência no Semiárido (Semana POP). Em maio de 2026, a 10ª edição foi realizada em Itacuruba, reunindo a UFRPE, o Observatório Nacional, o INSA e parceiros locais. A equipe do Desvendando participou com dinâmicas interativas, em uma programação ligada à ciência, à cultura e ao futuro do Semiárido.</p><div class="btn-row"><a class="btn btn-gold" href="https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/astronomia-e-astrofisica/oasi" rel="noopener noreferrer" target="_blank">Conheça o OASI ↗</a><a class="btn btn-outline" href="https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/astronomia-e-astrofisica/oasi/impacton/noticias/visita-tecnica-ao-oasi-2013-27-de-maio-de-2022/" rel="noopener noreferrer" target="_blank">Visita técnica · ON ↗</a><a class="btn btn-outline" href="https://ufrpe.br/not%C3%ADcias/semana-de-populariza%C3%A7%C3%A3o-da-ci%C3%AAncia-no-semi%C3%A1rido-chega-%C3%A0-d%C3%A9cima-edi%C3%A7%C3%A3o/" rel="noopener noreferrer" target="_blank">10ª Semana POP ↗</a></div></div></div>
+<div class="oasi-stat-grid"><div class="oasi-stat"><strong>15 anos</strong><span>do OASI, celebrados em 2026, segundo a programação institucional.</span></div><div class="oasi-stat"><strong>10ª edição</strong><span>da Semana POP, realizada em Itacuruba de 27 a 29 de maio de 2026.</span></div><div class="oasi-stat"><strong>1 metro</strong><span>de diâmetro do espelho primário do telescópio do OASI, conforme informações institucionais.</span></div></div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Galeria" class="site-page" data-page-panel="galeria" hidden="" id="page-galeria"><section class="section section-alt" id="galeria">
+<div class="container"><header class="section-heading"><p class="eyebrow">06 · Registros do acervo</p><h2>Ciência vivida em grupo</h2><p class="section-intro">Fotografias locais do acervo do projeto: oficinas, observação, monitores, experiências e encontros com o público. Toque em uma imagem para ampliá-la.</p></header>
+<div class="gallery-grid"><button aria-label="Ampliar fotografia: Equipe reunida diante de uma cúpula observacional" class="gallery-item" data-alt="Equipe reunida diante de uma cúpula observacional" data-lightbox="assets/oasi-equipe.webp" type="button"><img alt="Equipe reunida diante de uma cúpula observacional" decoding="async" loading="lazy" src="assets/oasi-equipe.webp"/><span>Equipe reunida diante de uma cúpula observacional</span></button>
+<button aria-label="Ampliar fotografia: Atividade externa de astronomia com instrumentos" class="gallery-item" data-alt="Atividade externa de astronomia com instrumentos" data-lightbox="assets/f5.webp" type="button"><img alt="Atividade externa de astronomia com instrumentos" decoding="async" loading="lazy" src="assets/f5.webp"/><span>Atividade externa de astronomia com instrumentos</span></button>
+<button aria-label="Ampliar fotografia: Céu estrelado registrado durante uma atividade" class="gallery-item" data-alt="Céu estrelado registrado durante uma atividade" data-lightbox="assets/f6.webp" type="button"><img alt="Céu estrelado registrado durante uma atividade" decoding="async" loading="lazy" src="assets/f6.webp"/><span>Céu estrelado registrado durante uma atividade</span></button>
+<button aria-label="Ampliar fotografia: Mediação com telescópio durante o dia" class="gallery-item" data-alt="Mediação com telescópio durante o dia" data-lightbox="assets/f15.webp" type="button"><img alt="Mediação com telescópio durante o dia" decoding="async" loading="lazy" src="assets/f15.webp"/><span>Mediação com telescópio durante o dia</span></button>
+<button aria-label="Ampliar fotografia: Personagem e teatro científico" class="gallery-item" data-alt="Personagem e teatro científico" data-lightbox="assets/f1.webp" type="button"><img alt="Personagem e teatro científico" decoding="async" loading="lazy" src="assets/f1.webp"/><span>Personagem e teatro científico</span></button>
+<button aria-label="Ampliar fotografia: Experimentos e atividades ao ar livre" class="gallery-item" data-alt="Experimentos e atividades ao ar livre" data-lightbox="assets/f3.webp" type="button"><img alt="Experimentos e atividades ao ar livre" decoding="async" loading="lazy" src="assets/f3.webp"/><span>Experimentos e atividades ao ar livre</span></button>
+<button aria-label="Ampliar fotografia: Atividade educativa com instrumentos" class="gallery-item" data-alt="Atividade educativa com instrumentos" data-lightbox="assets/f11.webp" type="button"><img alt="Atividade educativa com instrumentos" decoding="async" loading="lazy" src="assets/f11.webp"/><span>Atividade educativa com instrumentos</span></button>
+<button aria-label="Ampliar fotografia: Histórias e conversa com o público infantil" class="gallery-item" data-alt="Histórias e conversa com o público infantil" data-lightbox="assets/f8.webp" type="button"><img alt="Histórias e conversa com o público infantil" decoding="async" loading="lazy" src="assets/f8.webp"/><span>Histórias e conversa com o público infantil</span></button>
+<button aria-label="Ampliar fotografia: Equipamento preparado para observação noturna" class="gallery-item" data-alt="Equipamento preparado para observação noturna" data-lightbox="assets/f7.webp" type="button"><img alt="Equipamento preparado para observação noturna" decoding="async" loading="lazy" src="assets/f7.webp"/><span>Equipamento preparado para observação noturna</span></button>
+<button aria-label="Ampliar fotografia: Monitores em atividade de divulgação" class="gallery-item" data-alt="Monitores em atividade de divulgação" data-lightbox="assets/f10.webp" type="button"><img alt="Monitores em atividade de divulgação" decoding="async" loading="lazy" src="assets/f10.webp"/><span>Monitores em atividade de divulgação</span></button>
+<button aria-label="Ampliar fotografia: Mediação científica com estudantes" class="gallery-item" data-alt="Mediação científica com estudantes" data-lightbox="assets/f14.webp" type="button"><img alt="Mediação científica com estudantes" decoding="async" loading="lazy" src="assets/f14.webp"/><span>Mediação científica com estudantes</span></button>
+<button aria-label="Ampliar fotografia: Orientação no uso de telescópios" class="gallery-item" data-alt="Orientação no uso de telescópios" data-lightbox="assets/f16.webp" type="button"><img alt="Orientação no uso de telescópios" decoding="async" loading="lazy" src="assets/f16.webp"/><span>Orientação no uso de telescópios</span></button>
+<button aria-label="Ampliar fotografia: Aprendizado prático com telescópio" class="gallery-item" data-alt="Aprendizado prático com telescópio" data-lightbox="assets/f9.webp" type="button"><img alt="Aprendizado prático com telescópio" decoding="async" loading="lazy" src="assets/f9.webp"/><span>Aprendizado prático com telescópio</span></button>
+<button aria-label="Ampliar fotografia: Apresentação sobre astronomia" class="gallery-item" data-alt="Apresentação sobre astronomia" data-lightbox="assets/f12.webp" type="button"><img alt="Apresentação sobre astronomia" decoding="async" loading="lazy" src="assets/f12.webp"/><span>Apresentação sobre astronomia</span></button>
+<button aria-label="Ampliar fotografia: Encontro educativo com crianças" class="gallery-item" data-alt="Encontro educativo com crianças" data-lightbox="assets/f13.webp" type="button"><img alt="Encontro educativo com crianças" decoding="async" loading="lazy" src="assets/f13.webp"/><span>Encontro educativo com crianças</span></button>
+<button aria-label="Ampliar fotografia: Observação astronômica à noite" class="gallery-item" data-alt="Observação astronômica à noite" data-lightbox="assets/f4.webp" type="button"><img alt="Observação astronômica à noite" decoding="async" loading="lazy" src="assets/f4.webp"/><span>Observação astronômica à noite</span></button></div>
+<div class="btn-row" style="justify-content:center;margin-top:1.6rem"><a class="btn btn-outline-dark" href="https://drive.google.com/drive/folders/1LGv4pSrye9NgpvY-9K5fTtsJt1vxiGj4?usp=sharing" rel="noopener noreferrer" target="_blank">Abrir pasta de fotos no Drive ↗</a><a class="btn btn-outline-dark" href="https://www.instagram.com/desvendandoceuaustral?obrf=am80NDhvcHRkZ2U1" rel="noopener noreferrer" target="_blank">Ver registros no Instagram ↗</a></div>
+</div>
+</section></div><div aria-hidden="true" aria-label="Fontes e registros" class="site-page" data-page-panel="fontes" hidden="" id="page-fontes"><section class="section" id="fontes">
+<div class="container"><header class="section-heading"><p class="eyebrow">Fontes e registros</p><h2>Consulte as fontes e os registros</h2><p class="section-intro">A seleção abaixo permite conferir notícias institucionais, registros de eventos, arquivos históricos e publicações relacionadas à trajetória descrita nesta página.</p></header><div class="source-grid"><a class="source-card" href="https://sigs.ufrpe.br/sigaa/public/programa/noticias_desc.jsf?id=400&amp;lc=pt_BR&amp;noticia=42351205" rel="noopener noreferrer" target="_blank"><strong>Motion graphics e pesquisa na UFRPE <span aria-hidden="true">↗</span></strong><span>Registro acadêmico sobre materiais digitais no ensino de Física e produto audiovisual ligado ao projeto.</span></a>
+<a class="source-card" href="https://desvendandoufrpe.blogspot.com/2014/05/o-que-aconteceu-iv-mostra-de-astronomia.html" rel="noopener noreferrer" target="_blank"><strong>IV Mostra de Astronomia · 2014 <span aria-hidden="true">↗</span></strong><span>Registro de programação com escolas, PIBID-Física, Espaço Ciência, teatro, palestras e oficinas.</span></a>
+<a class="source-card" href="https://desvendandoufrpe.blogspot.com/2014/09/desvendando-o-ceu-austral-participa-de.html" rel="noopener noreferrer" target="_blank"><strong>Ação em Serra Talhada · 2014 <span aria-hidden="true">↗</span></strong><span>Registro histórico de atividades de extensão em outra cidade.</span></a>
+<a class="source-card" href="https://desvendandoufrpe.blogspot.com/2014/09/desvendando-o-ceu-austral-participa-de_16.html" rel="noopener noreferrer" target="_blank"><strong>Ação no IFPE de Belo Jardim · 2014 <span aria-hidden="true">↗</span></strong><span>Registro histórico de uma atividade de divulgação científica em instituição de ensino.</span></a>
+<a class="source-card" href="https://www.ufrpe.br/es/not%C3%ADcias/ufrpe-inaugura-museu-de-ci%C3%AAncias-desvendando-o-c%C3%A9u-austral/" rel="noopener noreferrer" target="_blank"><strong>Museu de Ciências · UFRPE <span aria-hidden="true">↗</span></strong><span>Anúncio institucional da inauguração do Museu, em maio de 2026.</span></a>
+<a class="source-card" href="https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/astronomia-e-astrofisica/oasi" rel="noopener noreferrer" target="_blank"><strong>OASI · Observatório Nacional <span aria-hidden="true">↗</span></strong><span>Informações institucionais sobre o observatório e sua atuação científica.</span></a>
+<a class="source-card" href="https://ufrpe.br/not%C3%ADcias/semana-de-populariza%C3%A7%C3%A3o-da-ci%C3%AAncia-no-semi%C3%A1rido-chega-%C3%A0-d%C3%A9cima-edi%C3%A7%C3%A3o/" rel="noopener noreferrer" target="_blank"><strong>10ª Semana POP · UFRPE <span aria-hidden="true">↗</span></strong><span>Notícia sobre a edição realizada em Itacuruba em maio de 2026.</span></a>
+<a class="source-card" href="https://www.gov.br/observatorio/pt-br/assuntos/areas-de-atuacao/astronomia-e-astrofisica/oasi/impacton/noticias/visita-tecnica-ao-oasi-2013-27-de-maio-de-2022/" rel="noopener noreferrer" target="_blank"><strong>Visita técnica ao OASI · 2022 <span aria-hidden="true">↗</span></strong><span>Registro de visita técnica ao observatório.</span></a>
+<a class="source-card" href="https://www.gov.br/observatorio/pt-br/assuntos/noticias/observatorio-astronomico-do-sertao-de-itaparica-oasi-on-de-portas-abertas-na-snct-2022" rel="noopener noreferrer" target="_blank"><strong>OASI de portas abertas · 2022 <span aria-hidden="true">↗</span></strong><span>Registro de atividade do observatório na Semana Nacional de Ciência e Tecnologia.</span></a>
+<a class="source-card" href="https://www.alepe.pe.gov.br/2023/09/20/comissao-de-ciencia-e-tecnologia-realiza-acao-para-popularizar-a-astronomia/" rel="noopener noreferrer" target="_blank"><strong>Astronomia na ALEPE · 2023 <span aria-hidden="true">↗</span></strong><span>Notícia sobre ação pública de divulgação astronômica.</span></a>
+<a class="source-card" href="https://www.cultura.pe.gov.br/canal/espacosculturais/programacao-no-observatorio-da-torre-malakoff-convida-interessados-em-astronomia/" rel="noopener noreferrer" target="_blank"><strong>Programação na Torre Malakoff <span aria-hidden="true">↗</span></strong><span>Registro cultural de observação e divulgação astronômica em Recife.</span></a>
+<a class="source-card" href="https://sectipe.blogspot.com/2020/10/clipmail-secti-08102020.html" rel="noopener noreferrer" target="_blank"><strong>Santa Filomena · articulação científica <span aria-hidden="true">↗</span></strong><span>Registro de propostas de divulgação e preservação de memória após a queda de meteoritos em 2020.</span></a>
+<a class="source-card" href="https://www.museuitinerante.com/serra-do-mag%C3%A9" rel="noopener noreferrer" target="_blank"><strong>Meteorito Serra do Magé <span aria-hidden="true">↗</span></strong><span>Referência histórica sobre a queda observada em 1923, na região de Alagoinha.</span></a>
+<a class="source-card" href="https://astronomiaufrpe.wixsite.com/desvendando" rel="noopener noreferrer" target="_blank"><strong>Arquivo do projeto <span aria-hidden="true">↗</span></strong><span>Publicações e registros históricos do Desvendando o Céu Austral.</span></a>
+<a class="source-card" href="https://astronomiaufrpe.wixsite.com/desvendando/single-post/2017/05/29/iii-semana-da-populariza%C3%A7%C3%A3o-da-ci%C3%AAncia-no-semi%C3%A1rido-monteiro" rel="noopener noreferrer" target="_blank"><strong>Samyr Pessoa · registro do projeto <span aria-hidden="true">↗</span></strong><span>Registro de palestra sobre astrobiologia e participação em teatro científico na Semana POP de 2017.</span></a>
+<a class="source-card" href="https://www.facebook.com/UFRPEoficial/posts/samyr-pessoa-da-silva-esse-foi-o-nome-escolhido-por-71-dos-estudantes-da-ufrpe-p/3466004156789113/" rel="noopener noreferrer" target="_blank"><strong>Samyr Pessoa · postagem da UFRPE <span aria-hidden="true">↗</span></strong><span>Postagem institucional que menciona votação com 71% dos estudantes. O contexto completo deve ser verificado diretamente na publicação.</span></a></div></div>
+</section></div></main>
+<footer class="site-footer"><img alt="" aria-hidden="true" class="brand-mark" height="42" src="favicon.svg?v=20261112d" width="42"/><p><strong>Desvendando o Céu Austral</strong></p><p>Museu de Ciências · Universidade Federal Rural de Pernambuco</p><p>Popularizar a ciência, valorizar a história e aproximar pessoas do Universo.</p><small>Este site é uma apresentação informativa. Confirme com a equipe os horários, o agendamento e a disponibilidade das atividades.</small></footer>
+<a aria-label="Voltar ao início" class="back-top" href="#visita">↑</a>
+<div aria-hidden="true" aria-label="Fotografia ampliada" aria-modal="true" class="lightbox" id="lightbox" role="dialog"><button aria-label="Fechar fotografia" class="lightbox-close" id="lightboxClose" type="button">×</button><img alt="" id="lightboxImage" src=""/></div>
+<script>
+    (function(){
+      'use strict';
+      const root = document.documentElement;
+      const themeButton = document.getElementById('themeToggle');
+      const themeMeta = document.getElementById('themeColorMeta');
+      function applyTheme(theme, persist){
+        const current = theme === 'dark' ? 'dark' : 'light';
+        root.dataset.theme = current;
+        if(themeButton){
+          const next = current === 'dark' ? 'light' : 'dark';
+          const label = next === 'dark' ? 'Ativar tema escuro' : 'Ativar tema claro';
+          themeButton.setAttribute('aria-label', label);
+          themeButton.setAttribute('title', label);
+          themeButton.setAttribute('aria-pressed', String(current === 'dark'));
+          const text = themeButton.querySelector('.theme-label');
+          if(text) text.textContent = next === 'dark' ? 'Tema escuro' : 'Tema claro';
+        }
+        if(themeMeta) themeMeta.setAttribute('content', current === 'dark' ? '#0a1525' : '#f5f7fb');
+        if(persist){try{localStorage.setItem('desvendando-theme', current);}catch(_){/* A troca segue funcional mesmo sem armazenamento. */}}
+      }
+      if(themeButton){
+        applyTheme(root.dataset.theme || 'light', false);
+        themeButton.addEventListener('click', function(){applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark', true);});
+      }
+
+      const pagesMenuButton = document.getElementById('pagesMenuToggle');
+      const pagesMenu = document.getElementById('pagesMenu');
+      const pagesMenuClose = document.getElementById('pagesMenuClose');
+      const pagesMenuBackdrop = document.getElementById('pagesMenuBackdrop');
+      const pagePanels = Array.from(document.querySelectorAll('[data-page-panel]'));
+      const pageButtons = pagesMenu ? Array.from(pagesMenu.querySelectorAll('[data-page-target]')) : [];
+      function setPagesMenu(open){
+        if(!pagesMenuButton || !pagesMenu) return;
+        pagesMenu.classList.toggle('is-open',open);
+        if(pagesMenuBackdrop) pagesMenuBackdrop.classList.toggle('is-open',open);
+        document.body.classList.toggle('side-menu-open',open);
+        pagesMenuButton.setAttribute('aria-expanded',String(open));
+        pagesMenuButton.setAttribute('aria-label',open?'Fechar menu de páginas':'Abrir menu de páginas');
+        pagesMenuButton.setAttribute('title',open?'Fechar menu de páginas':'Abrir menu de páginas');
+        pagesMenu.setAttribute('aria-hidden',String(!open));
+        pagesMenu.inert = !open;
+        if(open && pagesMenuClose) pagesMenuClose.focus();
+        else if(!open && document.activeElement && pagesMenu.contains(document.activeElement)) pagesMenuButton.focus();
+      }
+      function showPage(pageId, anchorId, updateAddress){
+        const selected = pagePanels.find(panel => panel.dataset.pagePanel === pageId);
+        if(!selected) return;
+        pagePanels.forEach(panel => {
+          const active = panel === selected;
+          panel.hidden = !active;
+          panel.classList.toggle('is-active',active);
+          panel.setAttribute('aria-hidden',String(!active));
+        });
+        pageButtons.forEach(button => {
+          const active = button.dataset.pageTarget === pageId;
+          button.classList.toggle('is-active',active);
+          if(active) button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current');
+        });
+        setPagesMenu(false);
+        const target = anchorId ? document.getElementById(anchorId) : null;
+        if(updateAddress){
+          const hash = target ? '#' + anchorId : '#apresentacao';
+          try{history.pushState({page:pageId},'',hash);}catch(_){}
+        }
+        requestAnimationFrame(function(){
+          if(target){target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});}
+          else window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+        });
+      }
+      if(pagesMenuButton && pagesMenu){
+        pagesMenuButton.addEventListener('click',function(){setPagesMenu(pagesMenuButton.getAttribute('aria-expanded')!=='true');});
+        if(pagesMenuClose) pagesMenuClose.addEventListener('click',function(){setPagesMenu(false);});
+        if(pagesMenuBackdrop) pagesMenuBackdrop.addEventListener('click',function(){setPagesMenu(false);});
+        pageButtons.forEach(button => button.addEventListener('click',function(){showPage(button.dataset.pageTarget,button.dataset.pageAnchor,true);}));
+        document.addEventListener('keydown',function(event){if(event.key==='Escape')setPagesMenu(false);});
+      }
+      function activatePageFromHash(scrollToTarget){
+        const id = decodeURIComponent((window.location.hash || '').slice(1));
+        if(!id) return;
+        const target = document.getElementById(id);
+        const panel = target ? target.closest('[data-page-panel]') : null;
+        if(panel){
+          const alreadyActive = !panel.hidden;
+          pagePanels.forEach(item => {item.hidden = item !== panel; item.classList.toggle('is-active',item === panel); item.setAttribute('aria-hidden',String(item !== panel));});
+          pageButtons.forEach(button => {const active=button.dataset.pageTarget===panel.dataset.pagePanel;button.classList.toggle('is-active',active);if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});
+          if(scrollToTarget && target && !alreadyActive) requestAnimationFrame(() => target.scrollIntoView({behavior:'auto',block:'start'}));
+        }
+      }
+      if(pagesMenu){
+        setPagesMenu(false);
+        activatePageFromHash(false);
+        window.addEventListener('popstate',function(){activatePageFromHash(true);});
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+          link.addEventListener('click',function(event){
+            const href = link.getAttribute('href') || '';
+            if(href.length < 2) return;
+            const target = document.getElementById(decodeURIComponent(href.slice(1)));
+            const panel = target ? target.closest('[data-page-panel]') : null;
+            if(!target || !panel || !panel.hidden) return;
+            event.preventDefault();
+            showPage(panel.dataset.pagePanel,target.id,true);
+          });
+        });
+      }
+
+
+      const activityFilters = document.querySelectorAll('[data-activity-filter]');
+      const activityCards = document.querySelectorAll('[data-activity-category]');
+      activityFilters.forEach(function(button){
+        button.addEventListener('click',function(){
+          const category=button.dataset.activityFilter;
+          activityFilters.forEach(function(item){
+            const active=item===button;
+            item.classList.toggle('is-active',active);
+            item.setAttribute('aria-pressed',String(active));
+          });
+          activityCards.forEach(function(card){card.hidden=category!=='all'&&card.dataset.activityCategory!==category;});
+        });
+      });
+
+      const lightbox=document.getElementById('lightbox');
+      const lightboxImage=document.getElementById('lightboxImage');
+      const closeButton=document.getElementById('lightboxClose');
+      let previousFocus=null;
+      function closeLightbox(){
+        if(!lightbox || !lightboxImage) return;
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden','true');
+        document.body.classList.remove('no-scroll');
+        lightboxImage.removeAttribute('src');
+        lightboxImage.alt='';
+        if(previousFocus&&previousFocus.focus) previousFocus.focus();
+      }
+      document.querySelectorAll('[data-lightbox]').forEach(function(button){
+        button.addEventListener('click',function(){
+          if(!lightbox || !lightboxImage) return;
+          previousFocus=button;
+          lightboxImage.src=button.getAttribute('data-lightbox');
+          lightboxImage.alt=button.getAttribute('data-alt')||'Fotografia do acervo do Desvendando o Céu Austral';
+          lightbox.setAttribute('aria-hidden','false');
+          lightbox.classList.add('is-open');
+          document.body.classList.add('no-scroll');
+          if(closeButton) closeButton.focus();
+        });
+      });
+      if(closeButton) closeButton.addEventListener('click',closeLightbox);
+      if(lightbox) lightbox.addEventListener('click',function(event){if(event.target===lightbox)closeLightbox();});
+      document.addEventListener('keydown',function(event){if(event.key==='Escape'){if(lightbox&&lightbox.classList.contains('is-open'))closeLightbox();}});
+
+      const historyToggle=document.getElementById('historyToggle');
+      const historyContent=document.getElementById('historyContent');
+      if(historyToggle && historyContent){
+        historyToggle.addEventListener('click',function(){
+          const isOpening=historyContent.hidden;
+          historyContent.hidden=!isOpening;
+          historyToggle.setAttribute('aria-expanded',String(isOpening));
+          historyToggle.textContent=isOpening?'Ocultar a História do Desvendando':'Conhecer a História do Desvendando';
+          if(isOpening){
+            const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            window.setTimeout(function(){historyContent.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'});},0);
+          }
+        });
+      }
+
+      // Envio sem redirecionamento: mantém o visitante no formulário e envia uma cópia integral ao e-mail informado.
+      const visitForm=document.getElementById('visitForm');
+      const formFeedback=document.getElementById('formFeedback');
+      const formFallback=document.getElementById('formFallback');
+      if(visitForm && formFeedback){
+        visitForm.addEventListener('submit',async function(event){
+          event.preventDefault();
+          if(!visitForm.reportValidity()) return;
+          const submitButton=visitForm.querySelector('button[type="submit"]');
+          const resetButton=visitForm.querySelector('button[type="reset"]');
+          const originalLabel=submitButton ? submitButton.textContent : '';
+          const emailField=visitForm.querySelector('[name="email"]');
+          const visitorEmail=emailField ? String(emailField.value).trim() : '';
+          const copyField=visitForm.querySelector('[name="_cc"]');
+          const replyField=visitForm.querySelector('[name="_replyto"]');
+          const urlField=visitForm.querySelector('[name="_url"]');
+          if(copyField) copyField.value=visitorEmail;
+          if(replyField) replyField.value=visitorEmail;
+          if(urlField) urlField.value=window.location.href.split('#')[0];
+          const data=new FormData(visitForm);
+          const payload={};
+          data.forEach(function(value,key){
+            if(Object.prototype.hasOwnProperty.call(payload,key)){
+              if(Array.isArray(payload[key])) payload[key].push(value);
+              else payload[key]=[payload[key],value];
+            } else payload[key]=value;
+          });
+          formFeedback.className='form-feedback';
+          formFeedback.textContent='Enviando sua solicitação…';
+          formFeedback.classList.add('is-visible');
+          if(formFallback) formFallback.hidden=true;
+          if(submitButton){submitButton.disabled=true;submitButton.textContent='Enviando…';}
+          if(resetButton) resetButton.disabled=true;
+          try{
+            const response=await fetch(visitForm.action,{
+              method:'POST',
+              headers:{'Content-Type':'application/json','Accept':'application/json'},
+              body:JSON.stringify(payload)
+            });
+            const result=await response.json().catch(function(){return null;});
+            if(!response.ok || !result || !result.success){
+              const message=result && (result.message || result.errors && result.errors.join(', '));
+              throw new Error(message || 'O serviço não confirmou o recebimento.');
+            }
+            formFeedback.className='form-feedback is-visible';
+            formFeedback.textContent='O serviço de formulários aceitou sua solicitação. A cópia integral será encaminhada ao e-mail informado. Isso ainda não confirma a data da visita. Na primeira ativação, a equipe do Museu precisa confirmar o endereço institucional no e-mail enviado pelo FormSubmit; enquanto essa confirmação não for feita, a entrega final pode ficar pendente.';
+            formFeedback.focus();
+          }catch(error){
+            formFeedback.className='form-feedback is-visible is-error';
+            formFeedback.textContent='Não foi possível confirmar o envio pelo formulário. Seus dados continuam preenchidos. Você pode tentar novamente ou enviar a solicitação diretamente pelo e-mail institucional.';
+            if(formFallback){
+              const fields=Array.from(new FormData(visitForm).entries()).filter(function(entry){return !String(entry[0]).startsWith('_');});
+              const body=fields.map(function(entry){return entry[0]+': '+entry[1];}).join('\n');
+              formFallback.href='mailto:desvendandooceuaustral.df@ufrpe.br?subject='+encodeURIComponent('Solicitação de visita ao Museu')+'&body='+encodeURIComponent(body);
+              formFallback.hidden=false;
+            }
+            formFeedback.focus();
+            console.error('Erro no envio do formulário:',error);
+          }finally{
+            if(submitButton){submitButton.disabled=false;submitButton.textContent=originalLabel;}
+            if(resetButton) resetButton.disabled=false;
+          }
+        });
+        visitForm.addEventListener('reset',function(){
+          window.setTimeout(function(){
+            formFeedback.className='form-feedback';
+            formFeedback.textContent='';
+            if(formFallback){formFallback.hidden=true;formFallback.removeAttribute('href');}
+            ['_cc','_replyto','_url'].forEach(function(name){
+              const field=visitForm.querySelector('[name="'+name+'"]');
+              if(field) field.value='';
+            });
+          },0);
+        });
+      }
+
+      const backTop=document.querySelector('.back-top');
+      function updateBackTop(){if(backTop)backTop.classList.toggle('is-visible',window.scrollY>500);}
+      window.addEventListener('scroll',updateBackTop,{passive:true});
+      updateBackTop();
+
+      if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+        const revealItems=document.querySelectorAll('.section-heading,.value-card,.timeline-item,.activity-card,.oasi-stat,.partner-card,.community-box,.gallery-item,.source-card,.contact-card,.social-panel');
+        if(revealItems.length){
+          root.classList.add('motion-ready');
+          revealItems.forEach(function(item){item.classList.add('reveal');});
+          const observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -20px 0px'});
+          revealItems.forEach(function(item){observer.observe(item);});
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
